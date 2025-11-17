@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="290dp"
+        android:layout_margin="3dp"
+        android:background="@color/background_card"
+        app:cardUseCompatPadding="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="8dp">
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:text="Rate Us"
+                android:textColor="@color/lavander"
+                android:textSize="15sp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <TextView
+                android:id="@+id/tvBody"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="20dp"
+                android:text="We love to hear from you! How was experience when autobudgeting?"
+                android:textColor="@color/grey"
+                android:textSize="15sp"
+                app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+
+
+            <LinearLayout
+                android:id="@+id/ratingLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                app:layout_constraintTop_toBottomOf="@+id/tvBody"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="15dp">
+
+
+                <LinearLayout
+                    android:id="@+id/emojiBadLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_margin="8dp"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="☹️"
+                        android:textSize="30sp"
+                        android:id="@+id/emojiBad" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Bad"
+                        android:textSize="12sp"
+                        android:textColor="@color/text_color"
+                        android:gravity="center" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/emojiNeutralLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_margin="8dp"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="😐"
+                        android:textSize="30sp"
+                        android:id="@+id/emojiNeutral" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Neutral"
+                        android:textSize="12sp"
+                        android:textColor="@color/text_color"
+                        android:gravity="center"
+                        />
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:id="@+id/emojiVeryGoodLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_margin="8dp"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="😃"
+                        android:textSize="30sp"
+                        android:id="@+id/emojiGood" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Excellent"
+                        android:textSize="12sp"
+                        android:textColor="@color/text_color"
+                        android:gravity="center" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/submitFeedbackBtn"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:background="@drawable/button_rectangle_line"
+                android:text="Continue"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_13ssp"
+                app:layout_constraintTop_toBottomOf="@+id/ratingLayout"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="14dp"
+                />
+            <TextView
+                android:id="@+id/tv_not_now"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/str_not_now"
+                android:textSize="16sp"
+                android:gravity="center_horizontal"
+                android:textStyle="bold"
+                android:textColor="@color/grey"
+                app:layout_constraintTop_toBottomOf="@+id/submitFeedbackBtn"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="20dp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

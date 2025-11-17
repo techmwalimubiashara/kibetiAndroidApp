@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="360dp"
+    android:layout_height="480dp"
+    android:layout_margin="15dp"
+    android:layout_gravity="bottom|center_horizontal"
+    android:background="@drawable/round_corners_white"
+    android:orientation="vertical"
+    android:padding="15dp">
+
+    <TextView
+        android:id="@+id/txtclose"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_gravity="end"
+        android:background="@drawable/cart_background"
+        android:gravity="center"
+        android:text="X"
+        android:textColor="@color/text_color"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:text="What did you spend on?"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/_12ssp"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:text="Transaction Code"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/_12ssp" />
+
+            <EditText
+                android:id="@+id/idCat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:backgroundTint="@color/primary_green"
+                android:enabled="false"
+                android:hint="Income Category"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:textColor="@color/primary_orange"
+                android:textColorHint="@color/lavander"
+                android:textSize="@dimen/_12ssp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:text="Date"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/_12ssp" />
+
+            <EditText
+                android:id="@+id/idDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:backgroundTint="@color/primary_green"
+                android:enabled="false"
+                android:hint="Date"
+                android:importantForAutofill="no"
+                android:inputType="number"
+                android:textColor="@color/primary_orange"
+                android:textColorHint="@color/lavander"
+                android:textSize="@dimen/_12ssp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:text="Sent to"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/_12ssp" />
+
+            <EditText
+                android:id="@+id/idSent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:backgroundTint="@color/primary_green"
+                android:enabled="false"
+                android:hint="Income Line"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:textColor="@color/primary_orange"
+                android:textColorHint="@color/lavander"
+                android:textSize="@dimen/_12ssp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:text="Amount"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/_12ssp" />
+
+            <EditText
+                android:id="@+id/idAmount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:backgroundTint="@color/primary_green"
+                android:enabled="false"
+                android:hint="Amount"
+                android:importantForAutofill="no"
+                android:inputType="number"
+                android:textColor="@color/primary_orange"
+                android:textColorHint="@color/lavander"
+                android:textSize="@dimen/_12ssp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="130dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:text="Select Expense"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/_12ssp" />
+
+            <TextView
+                android:id="@+id/etExpenseLine"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:backgroundTint="@color/primary_green"
+                android:hint="What did you spend on?"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:textColor="@color/lavander"
+                android:textColorHint="@color/lavander"
+                android:textSize="@dimen/_13ssp" />
+
+            <Spinner
+                android:id="@+id/idLine"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:backgroundTint="@color/primary_green"
+                android:hint="End Date"
+                android:importantForAutofill="no"
+                android:textColor="@color/primary_orange"
+                android:textColorHint="@color/lavander"
+                android:textSize="@dimen/_12ssp" />
+        </LinearLayout>
+
+        <CheckBox
+            android:visibility="gone"
+            android:id="@+id/checkBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Auto-allocate all future and unallocated transactions under"
+            android:textSize="15sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="10dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/idBtnDelete"
+                android:layout_width="120dp"
+                android:layout_height="35dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/button_rectangle_line"
+                android:text="Delete"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_9ssp"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/idBtnSave"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_margin="7dp"
+                android:background="@drawable/button_rectangle_line"
+                android:text="Save"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14ssp" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fitsSystemWindows="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <!-- Back Arrow Button -->
+    <ImageButton
+        android:id="@+id/btnBack"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:src="@drawable/ic_arrow_back"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="Back"
+        android:layout_margin="8dp"/>
+
+    <!-- Fixed Header Card - Now positioned below back button -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/headerCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnBack"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
+        app:cardBackgroundColor="@color/primary_orange"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="6-Month Spending"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/textTotalSpending"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ksh5,650.00"
+                android:textColor="@color/white"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:layout_marginTop="8dp"/>
+            <!--            <Button-->
+            <!--                android:id="@+id/btnTestTypes"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_below="@id/headerCard"-->
+            <!--                android:layout_margin="24dp"-->
+            <!--                android:text="Refresh"-->
+            <!--                android:textAllCaps="false"/>-->
+            <!--            <Button-->
+            <!--                android:id="@+id/btnDebug"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_below="@id/headerCard"-->
+            <!--                android:layout_margin="24dp"-->
+            <!--                android:text="Debug"-->
+            <!--                android:textAllCaps="false"/>-->
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+
+
+    <!-- Fixed Bottom Button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnNextTip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="24dp"
+        android:text="Next Tip"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:cornerRadius="8dp"
+        app:icon="@drawable/ic_arrow_forward"
+        app:iconGravity="end"
+        app:iconTint="@color/white"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        app:strokeColor="@color/primary_orange"
+        app:backgroundTint="@color/primary_orange"/>
+
+    <!-- Scrollable Content Area -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/btnNextTip"
+        android:layout_below="@id/headerCard"
+        android:background="@color/background"
+        android:fillViewport="true"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Top Recipients Section -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Top Recipients"
+                android:textColor="@color/text_color"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="16dp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerTopRecipients"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:paddingBottom="16dp"/>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

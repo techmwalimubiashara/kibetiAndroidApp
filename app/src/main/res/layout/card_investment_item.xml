@@ -1,0 +1,65 @@
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="8dp"
+    app:cardBackgroundColor="@color/background_card"
+    app:cardElevation="4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Investment Name -->
+        <TextView
+            android:id="@+id/tvInvest01"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="20dp"
+            android:text="Investment Name"
+            android:textColor="@color/text_color"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toStartOf="@+id/imInvest1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Info Icon -->
+        <ImageView
+            android:id="@+id/imInvest1"
+            android:layout_width="22dp"
+            android:layout_height="16dp"
+            android:layout_marginEnd="10dp"
+            android:contentDescription="Info Icon"
+            android:src="@drawable/nav_about"
+            app:layout_constraintBottom_toBottomOf="@+id/tvInvest01"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tvInvest01"
+            app:layout_constraintTop_toTopOf="@+id/tvInvest01" />
+
+        <!-- Amount Input -->
+        <EditText
+            android:id="@+id/etAmountInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:hint="Enter amount"
+            android:inputType="numberDecimal"
+            android:importantForAccessibility="yes"
+            android:imeOptions="actionDone"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:textColor="@color/text_color"
+            android:textColorHint="@color/lavander"
+            android:textSize="14sp"
+            android:backgroundTint="@color/lavander"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/tvInvest01"
+            app:layout_constraintTop_toBottomOf="@+id/tvInvest01" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

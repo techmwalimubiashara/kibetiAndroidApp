@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical"
+    tools:context=".MyGoalsActivity">
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floating_action_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="70dp"
+        android:backgroundTint="@color/primary_orange"
+        android:contentDescription="Add Client"
+        android:text="Add Goals"
+        app:elevation="150dp"
+        app:srcCompat="@drawable/ic_plus_24"
+        app:tint="@color/white" />
+
+    <LinearLayout
+        android:id="@+id/llHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/primary_orange"
+        android:orientation="horizontal"
+        android:weightSum="15">
+
+        <TextView
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_margin="14dp"
+            android:layout_weight="1"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="14dp"
+            android:layout_weight="3"
+            android:text="Goal"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="14dp"
+            android:layout_weight="3"
+            android:text="Amount"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="14dp"
+            android:layout_weight="3"
+            android:text="Date"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="14dp"
+            android:layout_weight="3"
+            android:text="Daily"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="14dp"
+            android:layout_weight="3"
+            android:text="Monthly"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+
+        >
+
+        <TextView
+            android:id="@+id/tvNotFound"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No Goal set"
+            android:textAlignment="center"
+            android:textColor="@color/grey"
+            android:layout_margin="7dp"
+            android:textStyle="bold"
+            android:textSize="@dimen/_15ssp"
+            />
+        <TextView
+            android:id="@+id/tvNotFoundExplanation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="You have not set your financial goal."
+            android:textAlignment="center"
+            android:textColor="@color/grey"
+            android:textSize="@dimen/_13ssp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            />
+
+        <Button
+            android:id="@+id/idBtnSubmitCourse"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_below="@id/scrollView"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="10dp"
+            android:text="I want to set my financial goal"
+            android:textSize="14sp"
+            android:textAllCaps="false"
+            android:background="@drawable/button_rectangle_line"
+            android:textColor="@color/white"
+            android:onClick="setGoal"
+            />
+
+    </LinearLayout>
+    <ListView
+        android:visibility="gone"
+        android:id="@+id/list_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="55dp" />
+
+    <LinearLayout
+        android:id="@+id/llFooter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@color/grey"
+        android:orientation="horizontal"
+        android:weightSum="15">
+
+        <TextView
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_margin="14dp"
+            android:layout_weight="1"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="14dp"
+            android:layout_weight="3"
+            android:text="Total"
+            android:textColor="@color/new_white"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvTtlAmount"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="14dp"
+            android:layout_weight="3"
+            android:text="Amount"
+            android:textColor="@color/new_white"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <TextView
+
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="14dp"
+            android:layout_weight="3"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvTtlDaily"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="14dp"
+            android:layout_weight="3"
+            android:text="Daily"
+            android:textColor="@color/new_white"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvTtlMonthly"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="14dp"
+            android:layout_weight="3"
+            android:text="Monthly"
+            android:textColor="@color/new_white"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:weightSum="17">
+
+        <TextView
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_margin="14dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_margin="14dp"
+            android:layout_weight="4"
+            android:text="Total"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/tvCumulativeActual"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_margin="14dp"
+            android:layout_weight="4"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/clientsPDF"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:onClick="exportClientsPDF">
+
+            <TextView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_margin="14dp"
+                android:background="@drawable/ic_pdf"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_margin="14dp"
+                android:background="@drawable/ic_baseline_print_24"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

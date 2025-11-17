@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fitsSystemWindows="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".eod_dashboard.EODFeelingActivity">
+
+    <!-- Title Bar -->
+    <LinearLayout
+        android:id="@+id/title_bar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/primary_orange"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- Close Button -->
+        <ImageButton
+            android:id="@+id/btn_close"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:contentDescription="Close"
+            android:src="@drawable/ic_arrow_back"
+            app:tint="@color/white" />
+        <!-- Title -->
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="Daily Finance Mood"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+    <!-- Scrollable Content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title_bar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Question Text -->
+            <TextView
+                android:id="@+id/tv_question"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingBottom="10dp"
+                android:paddingStart="3dp"
+                android:paddingEnd="3dp"
+                android:text="How do you feel about your finances today?"
+                android:textColor="@color/text_color"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/tv_instruction"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingBottom="10dp"
+                android:text="Please select one below"
+                android:textColor="@color/text_color"
+                android:textSize="15sp"  />
+            <!-- RadioGroup for Feelings -->
+            <RadioGroup
+                android:id="@+id/rg_feelings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb_very_sad"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="😢\nCrisis"
+                    android:textColor="@color/text_color"
+                    android:textSize="16sp" />
+
+                <RadioButton
+                    android:id="@+id/rb_sad"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="🙁\nStressed"
+                    android:textColor="@color/text_color"
+                    android:textSize="16sp" />
+
+                <RadioButton
+                    android:id="@+id/rb_neutral"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="😐\nUnsure"
+                    android:textColor="@color/text_color"
+                    android:textSize="16sp" />
+
+                <RadioButton
+                    android:id="@+id/rb_happy"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="🙂\nStable"
+                    android:textColor="@color/text_color"
+                    android:textSize="16sp" />
+
+                <RadioButton
+                    android:id="@+id/rb_very_happy"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="😃\nThriving"
+                    android:textColor="@color/text_color"
+                    android:textSize="16sp" />
+            </RadioGroup>
+
+            <!-- BarChart -->
+            <com.github.mikephil.charting.charts.BarChart
+                android:id="@+id/barChart"
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                android:layout_marginTop="30dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="30dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+
+            android:id="@+id/btn_set_reminder"
+            android:layout_width="200dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/button_background"
+            android:text="Set Reminder Time"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btn_my_spending"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/button_background"
+            android:text="Super proud! Tap complete journey! 🏆🎉."
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="14dp" />
+
+<!--        <Button-->
+<!--            android:id="@+id/btn_track_goal"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="45dp"-->
+<!--            android:layout_marginTop="20dp"-->
+<!--            android:background="@drawable/button_background"-->
+<!--            android:text="Step 3: Track my goals"-->
+<!--            android:textAllCaps="false"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:textSize="16dp" />-->
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

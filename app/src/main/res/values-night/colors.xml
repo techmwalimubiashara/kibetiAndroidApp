@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="new_white">#34282C</color>
+    <color name="lavander">#8692F7</color>
+    <color name="lavander_bg">#9E8DC9</color>
+    <color name="primary_orange">#158534</color>
+    <color name="primary_green">#6c8074</color>
+    <color name="primary_green_night">#a1bf4c</color>
+    <color name="input_hint">#FF716C6C</color>
+    <color name="fragment_background">#f3f3f3</color>
+    <color name="background">#0C090A</color>
+    <color name="background_card">#34282C</color>
+    <color name="grey">#D8D8D8</color>
+    <color name="red">#ff0040</color>
+    <color name="text_color">#f5f5f5</color>
+    <color name="text_black">#0C090A</color>
+    <color name="button_color">#635faa</color>
+    <color name="button_color1">#635faa</color>
+    <color name="colorPrimary">#6458d4</color>
+    <color name="colorPrimaryDark">#b4a3b7</color>
+    <color name="colorAccent">#F38118</color>
+    <color name="colorGrey">#656356</color>
+
+    <color name="light_green_bg">#54B754</color>
+    <color name="light_blue_bg">#5d75ff</color>
+    <color name="light_gold_bg">#A8A31B</color>
+    <color name="light_orange_bg">#C2944B</color>
+    <color name="light_peach_bg">#D47475</color>
+    <!-- colors for button style -->
+
+    <color name="gradient_start_color">#4c84ff</color>
+    <color name="gradient_end_color">#18a3fe</color>
+
+    <!-- colors for tab and screent text -->
+    <color name="tab_indicator_gray">#c0c0c0</color>
+    <color name="intro_title_color">#000000</color>
+    <color name="intro_description_color">#656565</color>
+
+    <color name="red_dull">#AF1B1B</color>
+
+    <!--for finance feeling colors-->
+    <color name="gray_dark">#4F4F4F</color>
+    <color name="gray_light">#4F4F4F</color>
+    <color name="blueBackground">#356cf9</color>
+    <color name="buttonBlue">#3A69E0</color>
+    <color name="lightBlue">#DFE6F6</color>
+    <color name="linkBlue">#4A76F7</color>
+</resources>

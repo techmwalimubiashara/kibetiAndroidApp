@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/emailFragment">
+
+    <!-- Email Fragment -->
+    <fragment
+        android:id="@+id/emailFragment"
+        android:name="com.example.plannerapp.forgot_password.ui.EmailVerificationFragment"
+        android:label="Email Fragment">
+        <action
+            android:id="@+id/action_emailFragment_to_codeVerificationFragment"
+            app:destination="@id/codeVerificationFragment" />
+    </fragment>
+
+    <!-- Code Verification Fragment -->
+    <fragment
+        android:id="@+id/codeVerificationFragment"
+        android:name="com.example.plannerapp.forgot_password.ui.CodeVerificationFragment"
+        android:label="Code Verification Fragment">
+        <action
+            android:id="@+id/action_codeVerificationFragment_to_resetPasswordFragment"
+            app:destination="@id/resetPasswordFragment" />
+        <action
+            android:id="@+id/action_codeVerificationFragment_to_emailFragment"
+            app:destination="@id/emailFragment" />
+    </fragment>
+
+    <!-- Reset Password Fragment -->
+    <fragment
+        android:id="@+id/resetPasswordFragment"
+        android:name="com.example.plannerapp.forgot_password.ui.CreatePasswordFragment"
+        android:label="Reset Password Fragment" />
+    <action
+        android:id="@+id/action_resetPasswordFragment_to_emailFragment"
+        app:destination="@id/emailFragment" />
+</navigation>

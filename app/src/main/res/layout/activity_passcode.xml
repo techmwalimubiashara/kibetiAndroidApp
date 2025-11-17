@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Relative layout as parent layout-->
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Passcode">
+
+    <!-- Passcode view , which is imported
+         from the dependency which have been added in
+         gradle file-->
+<!--    <com.hanks.passcodeview.PasscodeView-->
+<!--        android:id="@+id/passcodeview"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:background="@color/primary_orange"-->
+<!--        app:correctStateColor="#71bb4d"-->
+<!--        app:firstInputTip="Enter passcode "-->
+<!--        app:normalStateColor="#ffffff"-->
+<!--        app:numberTextColor="@color/primary_green"-->
+<!--        app:passcodeLength="4"-->
+<!--        app:passcodeViewType="set_passcode"-->
+<!--        app:wrongStateColor="#ea2b46" />-->
+
+</RelativeLayout>

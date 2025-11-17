@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/background"
+    tools:context=".AboutFragment">
+
+    <LinearLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="20dp"
+        android:orientation="vertical"
+        >
+
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="123dp"
+            android:layout_height="118dp"
+            app:srcCompat="@drawable/logo"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:textAlignment="center"
+            android:text="Treasure Chest App provide an easy and efficient way for users to understand their inflows outflows and show red lights in area that needs action."
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/_12ssp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:textAlignment="center"
+            android:text='Privacy Policy'
+            android:textColor="@color/grey"
+            android:textSize="@dimen/_12ssp"
+            />
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:textAlignment="center"
+            android:text='Terms &amp; Conditions'
+            android:textColor="@color/grey"
+            android:textSize="@dimen/_12ssp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:textAlignment="center"
+            android:text='Service Charter'
+            android:textColor="@color/grey"
+            android:textSize="@dimen/_12ssp"
+            />
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:textAlignment="center"
+            android:text='Email: info@mwalimubiashara.com'
+            android:textColor="@color/primary_green"
+            android:textSize="@dimen/_12ssp"
+            />
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="20dp"
+        android:textAlignment="center"
+        android:text="2023 MWALIMUBIASHARA LTD. ALL RIGHTS RESERVED"
+        android:textColor="@color/primary_orange"
+        android:textSize="@dimen/_10ssp"
+        android:textAllCaps="true"
+        android:layout_below="@+id/layout"
+        />
+
+</RelativeLayout>

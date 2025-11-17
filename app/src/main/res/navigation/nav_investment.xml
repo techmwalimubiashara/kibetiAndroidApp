@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_investment"
+    app:startDestination="@id/fragment_available_funds">
+
+    <fragment
+        android:id="@+id/fragment_available_funds"
+        android:name="com.mb.kibeti.invest_guide.AvailableFundsFragment"
+        android:label="Available Funds Fragment">
+        <action
+            android:id="@+id/action_availableFundsFragment_to_monthlyExpensesFragment"
+            app:destination="@id/monthlyExpensesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/monthlyExpensesFragment"
+        android:name="com.mb.kibeti.invest_guide.MonthlyExpensesFragment"
+        android:label="Monthly Expenses Fragment">
+        <action
+            android:id="@+id/action_monthlyExpensesFragment_to_emergencyFundFragment"
+            app:destination="@id/emergencyFundFragment" />"
+    </fragment>
+    <fragment
+        android:id="@+id/emergencyFundFragment"
+        android:name="com.mb.kibeti.invest_guide.EmergencyFundFragment"
+        android:label="Emergency Fund Fragment">
+    </fragment>
+
+
+</navigation>

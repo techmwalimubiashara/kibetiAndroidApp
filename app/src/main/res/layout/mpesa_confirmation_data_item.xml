@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_4sdp"
+        android:layout_marginEnd="@dimen/_4sdp"
+        android:layout_marginLeft="@dimen/_16sdp"
+        app:cardBackgroundColor="@color/background_card"
+        app:cardCornerRadius="@dimen/_6sdp"
+        app:cardElevation="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/_10sdp"
+            android:paddingLeft="@dimen/_20sdp"
+            android:paddingTop="@dimen/_3sdp"
+            android:paddingEnd="@dimen/_16sdp"
+            android:paddingRight="@dimen/_16sdp"
+            android:paddingBottom="@dimen/_5sdp">
+
+            <TextView
+                android:id="@+id/act_label"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_8sdp"
+                android:text="Date:"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/_10ssp"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ageTv"
+                />
+            <TextView
+                android:id="@+id/lastUpTv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="01-01-2010"
+                android:textColor="@color/primary_orange"
+                android:layout_marginEnd="10dp"
+                android:textSize="@dimen/_10ssp"
+                app:layout_constraintBottom_toBottomOf="@+id/act_label"
+                app:layout_constraintStart_toEndOf="@+id/act_label"
+                app:layout_constraintTop_toTopOf="@+id/act_label"
+                />
+            <TextView
+                android:id="@+id/varianceTv"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:text="Code"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/_10ssp"
+                app:layout_constraintStart_toEndOf="@+id/cat_label"
+                app:layout_constraintTop_toBottomOf="@+id/cat_label"
+                app:layout_constraintEnd_toStartOf="@+id/cat_label"
+                />
+            <TextView
+                android:id="@+id/nameTv"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="A13TFXZ78"
+                android:textColor="@color/primary_green"
+                android:layout_marginStart="10dp"
+                android:textSize="@dimen/_9ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="@+id/varianceTv"
+                app:layout_constraintStart_toEndOf="@+id/varianceTv"
+                app:layout_constraintTop_toTopOf="@+id/varianceTv"
+                />
+            <TextView
+                android:id="@+id/ageTv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="KPLC"
+                android:textColor="@color/primary_green"
+                android:textSize="@dimen/_11ssp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/cat_label"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
+            <TextView
+                android:id="@+id/currentTv"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="@dimen/_8sdp"
+                android:text="Time"
+                android:visibility="gone"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/_10ssp"
+                app:layout_constraintStart_toEndOf="@+id/ageTv"
+                app:layout_constraintBottom_toBottomOf="@+id/ageTv"
+                app:layout_constraintTop_toTopOf="@+id/ageTv"
+                app:layout_constraintEnd_toStartOf="@+id/statusTv"
+                />
+            <TextView
+                android:id="@+id/statusTv"
+                android:layout_width="0dp"
+                android:layout_marginStart="10dp"
+                android:layout_height="wrap_content"
+                android:text="10:34 AM"
+                android:textColor="@color/primary_green"
+                android:textSize="@dimen/_9ssp"
+                app:layout_constraintBottom_toBottomOf="@+id/lastUpTv"
+                app:layout_constraintStart_toEndOf="@+id/lastUpTv"
+                app:layout_constraintTop_toTopOf="@+id/lastUpTv"
+                />
+
+            <TextView
+                android:id="@+id/cat_label"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:text="Amount "
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/_10ssp"
+                app:layout_constraintStart_toEndOf="@+id/ageTv"
+                app:layout_constraintBottom_toBottomOf="@+id/ageTv"
+                app:layout_constraintTop_toTopOf="@+id/ageTv"
+                />
+            <TextView
+                android:id="@+id/cat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="KES 100000.00"
+                android:textColor="@color/primary_green"
+                android:textSize="@dimen/_10ssp"
+                app:layout_constraintBottom_toBottomOf="@+id/cat_label"
+                app:layout_constraintStart_toEndOf="@+id/cat_label"
+                app:layout_constraintTop_toTopOf="@+id/cat_label"
+                />
+            <TextView
+                android:id="@+id/actLbl"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:text="Trans Type: "
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/_10ssp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cat_label"
+                />
+
+            <TextView
+                android:id="@+id/genderTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Paybill"
+                android:textColor="@color/primary_orange"
+                android:textSize="@dimen/_10ssp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/actLbl"
+                app:layout_constraintStart_toEndOf="@+id/actLbl"
+                app:layout_constraintTop_toTopOf="@+id/actLbl"
+                />
+
+            <TextView
+                android:id="@+id/catLbl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:text="Category: "
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/_11ssp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/act_label"
+                />
+
+            <TextView
+                android:id="@+id/catTv"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="Shopping"
+                android:textColor="@color/primary_orange"
+                android:textSize="@dimen/_11ssp"
+                app:layout_constraintStart_toEndOf="@+id/catLbl"
+                app:layout_constraintTop_toTopOf="@+id/catLbl"
+                />
+
+            <TextView
+                android:id="@+id/varLbl"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:text="Variance: "
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/_10ssp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/actLbl"
+                android:visibility="gone"
+                />
+
+            <TextView
+                android:id="@+id/varAmtTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="KES 0.0"
+                android:textColor="@color/primary_orange"
+                android:textSize="@dimen/_10ssp"
+                app:layout_constraintBottom_toBottomOf="@+id/varLbl"
+                app:layout_constraintStart_toEndOf="@+id/varLbl"
+                app:layout_constraintTop_toTopOf="@+id/varLbl"
+                android:visibility="gone"
+                />
+            <Button
+                android:id="@+id/makeChangesBtn"
+                android:layout_width="130dp"
+                android:layout_height="32dp"
+                android:layout_margin="5dp"
+                android:layout_gravity="center"
+                android:text="Change category?"
+                android:textSize="10sp"
+                android:textAllCaps="false"
+                android:background="@drawable/button_rectangle_line"
+                android:textColor="@color/white"
+
+                app:layout_constraintStart_toStartOf="@+id/varianceTv"
+                app:layout_constraintTop_toBottomOf="@+id/varianceTv"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

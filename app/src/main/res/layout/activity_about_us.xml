@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/background"
+    tools:context=".AboutFragment">
+
+    <LinearLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="5dp"
+        android:orientation="vertical"
+        >
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="100dp"
+            android:layout_height="90dp"
+            app:srcCompat="@drawable/logo"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            />
+        <TextView
+            android:id="@+id/versionTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textAlignment="center"
+            android:text="Version"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/_11ssp"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:textAlignment="center"
+            android:text="@string/about_us"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/_11ssp"
+            />
+
+        <LinearLayout
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="50dp"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal">
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/privacy" />
+
+            <TextView
+                android:id="@+id/privacy_policy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:text='@string/privacy_policy'
+                android:textColor="@color/grey"
+                android:textSize="@dimen/_12ssp" />
+        </LinearLayout>
+
+        <LinearLayout
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="30dp"
+            android:layout_gravity="center_horizontal"
+        >
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            app:srcCompat="@drawable/notepad"
+            android:layout_gravity="center"
+            />
+
+        <TextView
+            android:id="@+id/tac"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text='@string/tac'
+            android:textColor="@color/grey"
+            android:textSize="@dimen/_12ssp"
+            android:layout_marginLeft="30dp"
+            />
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_gravity="center_horizontal"
+            >
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                app:srcCompat="@drawable/services"
+                android:layout_gravity="center"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text='Service Charter'
+                android:textColor="@color/grey"
+                android:textSize="@dimen/_12ssp"
+                android:layout_marginLeft="30dp"
+                />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvFeedback"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:textAlignment="center"
+            android:text='Feedback'
+            android:textColor="@color/primary_orange"
+            android:textSize="@dimen/_13ssp"
+            />
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="20dp"
+        android:textAlignment="center"
+        android:text="@string/web_page"
+        android:textColor="@color/primary_orange"
+        android:textSize="@dimen/_10ssp"
+        android:textAllCaps="true"
+        android:layout_below="@+id/layout"
+        />
+
+</RelativeLayout>

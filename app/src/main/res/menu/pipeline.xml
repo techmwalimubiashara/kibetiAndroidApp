@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_home"
+        android:icon="@drawable/nav_home"
+        android:orderInCategory="100"
+        android:title="Home"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_edit"
+        android:icon="@drawable/pen"
+        android:orderInCategory="100"
+        android:title="Edit"
+        app:showAsAction="always" />
+
+<!--    ALTER TABLE mpesa_track_tbl ADD UNIQUE (trans_code);-->
+
+<!--    SELECT `trans_id`, `trans_code`, `amount`, `cashflow`, `email`, `trans_name`, `trans_date`, `trans_time`, `trans_type`, `update_trans`, COUNT(`trans_code`)-->
+<!--    AS trans_code FROM mpesa_track_tbl GROUP BY `trans_code` HAVING COUNT(`trans_code`) > 1-->
+    <item
+        android:id="@+id/action_delete"
+        android:icon="@drawable/bin"
+        android:orderInCategory="100"
+        android:title="Delete"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_share"
+        android:icon="@drawable/nav_share"
+        android:orderInCategory="100"
+        android:title="Share"
+        app:showAsAction="always" />
+</menu>

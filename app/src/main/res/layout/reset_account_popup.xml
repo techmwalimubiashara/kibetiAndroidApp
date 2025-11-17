@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="340dp"
+    android:layout_height="330dp"
+    android:background="@drawable/round_corners_white"
+    android:padding="10dp"
+    android:layout_gravity="bottom|center_horizontal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp"
+        >
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="0dp"
+            android:layout_weight="0.9"
+            android:layout_height="wrap_content"
+            android:text="Account Resetting"
+            android:textAlignment="center"
+            android:textColor="@color/primary_orange"
+            android:textSize="@dimen/_15ssp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/textView3"
+             />
+        <TextView
+            android:id="@+id/txtclose"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:textColor="@color/text_color"
+            android:text="X"
+            android:textSize="@dimen/_16ssp"
+            android:textStyle="bold"
+            android:layout_gravity="end"
+            android:gravity="center"
+            android:background="@drawable/cart_background"/>
+
+    </LinearLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:id="@+id/monthlyAmount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:padding="15dp"
+                android:text=" By tapping 'Continue' you accept that this process will clear all data and is irreversible. \n\nData once deleted cannot be recovered."
+                android:textColor="@color/grey"
+                android:textSize="@dimen/_12ssp"
+                android:textAlignment="center"
+                android:layout_gravity="center"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="27dp"
+                android:gravity="center_horizontal"
+                >
+
+                <Button
+                    android:id="@+id/idBtnReset"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_margin="5dp"
+                    android:text="Continue"
+                    android:textAllCaps="false"
+                    android:textSize="@dimen/_14ssp"
+                    android:background="@drawable/button_rectangle_line"
+                    android:textColor="@color/white"
+                    />
+                <TextView
+                    android:id="@+id/idBtnCancel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="Cancel"
+                    android:textAllCaps="false"
+                    android:textSize="@dimen/_16ssp"
+                    android:gravity="center_horizontal"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_color"
+                    />
+
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</LinearLayout>

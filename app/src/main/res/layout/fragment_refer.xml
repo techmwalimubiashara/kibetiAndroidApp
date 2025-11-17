@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="@dimen/_18sdp"
+    tools:context=".ReferFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/tvHead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Coming \nSoon"
+        android:textColor="@color/primary_orange"
+        android:textSize="@dimen/_32sdp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:paddingStart="@dimen/_20sdp"
+
+        />
+    <TextView
+        android:id="@+id/tvSubheader"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+        android:paddingStart="@dimen/_20sdp"
+        android:paddingTop="@dimen/_30sdp"
+    android:text="Share the fun"
+        android:textColor="@color/primary_orange"
+        android:textSize="@dimen/_18sdp"
+        android:textStyle="bold"
+    app:layout_constraintStart_toStartOf="@+id/tvHead"
+    app:layout_constraintEnd_toEndOf="@+id/tvHead"
+    app:layout_constraintTop_toBottomOf="@+id/tvHead"
+    app:layout_constraintBottom_toBottomOf="@+id/tvHead"
+    />
+<ImageView
+    android:id="@+id/image"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:src="@drawable/plant"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/tvHead"
+    app:layout_constraintBottom_toTopOf="@+id/tvMission"/>
+    <TextView
+        android:id="@+id/tvMission"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="We're growing"
+        android:textColor="@color/primary_orange"
+        android:textSize="@dimen/_18sdp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

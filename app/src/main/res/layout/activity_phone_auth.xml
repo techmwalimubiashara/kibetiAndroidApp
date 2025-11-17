@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PhoneAuthActivity">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/text"
+        android:layout_margin="20dp"
+        android:text="Enter phone number"
+        android:layout_centerHorizontal="true"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/phone"
+        android:hint="Phone number"
+        android:inputType="phone"
+        android:layout_below="@+id/text"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="20dp"/>
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/btngenerateOTP"
+        android:gravity="center_horizontal"
+        android:text="Generate OTP"
+        android:layout_below="@+id/phone"
+        android:layout_marginBottom="20dp"
+        android:layout_marginStart="20dp"
+        android:textSize="20dp"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/otp"
+        android:hint="OTP"
+        android:inputType="number"
+        android:layout_below="@+id/btngenerateOTP"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="20dp"/>
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnverifyOTP"
+        android:gravity="center_horizontal"
+        android:text="Verify OTP"
+        android:layout_below="@+id/otp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginStart="20dp"
+        android:textSize="20dp"/>
+
+
+</RelativeLayout>

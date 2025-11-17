@@ -1,0 +1,153 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="16dp"
+    android:background="@color/background"
+    tools:context=".landingPageTask.ui.FinanceFeelingActivity">
+
+
+    <androidx.cardview.widget.CardView
+       android:id="@+id/image_finance"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:cardBackgroundColor="@color/lavander_bg"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp"
+        app:cardCornerRadius="20dp"
+        android:contentDescription="finance image" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="30dp"
+            android:src="@drawable/yellow_cup" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="47dp">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="I ❤️"
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:layout_marginTop="40dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kibeti"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                />
+        </LinearLayout>
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/tv_question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="How do you feel about your finances today?"
+        android:textSize="24sp"
+        android:textColor="@color/text_color"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/image_finance"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:gravity="center"
+        android:layout_marginTop="24dp"/>
+
+    <TextView
+        android:id="@+id/btn_crisis"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_button_grey"
+        android:text="😡 Crisis! This is crazy!"
+        android:textSize="16sp"
+        android:textColor="@color/grey"
+        android:gravity="start"
+        android:padding="16dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_question"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/btn_stressed"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_button_grey"
+        android:text="☹️ Stressed. I need a way out"
+        android:textSize="16sp"
+        android:textColor="@color/grey"
+        android:gravity="start"
+        android:padding="16dp"
+        app:layout_constraintTop_toBottomOf="@id/btn_crisis"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:id="@+id/btn_unsure"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_button_grey"
+        android:text="😐 Unsure. I have mixed feelings"
+        android:textSize="16sp"
+        android:textColor="@color/grey"
+        android:gravity="start"
+        android:padding="16dp"
+        app:layout_constraintTop_toBottomOf="@id/btn_stressed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:id="@+id/btn_stable"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_button_grey"
+        android:text="🙂 Stable. I am ok"
+        android:textSize="16sp"
+        android:textColor="@color/grey"
+        android:gravity="start"
+        android:padding="16dp"
+        app:layout_constraintTop_toBottomOf="@id/btn_unsure"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:id="@+id/btn_thriving"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_button_grey"
+        android:text="🥳 Thriving! This is the life!"
+        android:textSize="16sp"
+        android:textColor="@color/grey"
+        android:gravity="start"
+        android:padding="16dp"
+        app:layout_constraintTop_toBottomOf="@id/btn_stable"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

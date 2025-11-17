@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/llGenesis"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="21dp"
+            android:background="@drawable/round_corners_orange_alpha"
+            android:onClick="AlternativeDaily"
+            android:orientation="vertical"
+            android:padding="21dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Daily"
+                android:textColor="#fff"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="This alternative allows you to set revenue targets based on how much you estimate to generate per day"
+                android:textColor="#fff"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llExodus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="21dp"
+            android:background="@drawable/round_corners_green_alpha"
+            android:onClick="AlternativeWeekly"
+            android:orientation="vertical"
+            android:padding="21dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Weekly"
+                android:textColor="#fff"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="This alternative allows you to set revenue targets based on how much you estimate to generate per week"
+                android:textColor="#fff"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llLeviticus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="21dp"
+            android:background="@drawable/round_corners_orange_alpha"
+            android:onClick="AlternativeMonthly"
+            android:orientation="vertical"
+            android:padding="21dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Monthly"
+                android:textColor="#fff"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="This alternative allows you to set revenue targets based on how much you estimate to generate per month"
+                android:textColor="#fff"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llNumbers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="21dp"
+            android:background="@drawable/round_corners_green_alpha"
+            android:onClick="AlternativeQuarterly"
+            android:orientation="vertical"
+            android:padding="21dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Quarterly"
+                android:textColor="#fff"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="This alternative allows you to set revenue targets based on how much you estimate to generate per quarter"
+                android:textColor="#fff"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llDeuteronomy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="21dp"
+            android:background="@drawable/round_corners_orange_alpha"
+            android:onClick="AlternativeAnnually"
+            android:orientation="vertical"
+            android:padding="21dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Yearly"
+                android:textColor="#fff"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="This alternative allows you to set revenue targets based on how much you estimate to generate per year"
+                android:textColor="#fff"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="140dp" />
+    </LinearLayout>
+</ScrollView>

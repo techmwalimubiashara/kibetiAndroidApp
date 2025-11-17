@@ -1,0 +1,24 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Blue background (top part) -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/primary_orange" />
+        </shape>
+    </item>
+
+
+    <item
+        android:top="300dp"> <!-- Start this part lower on the screen -->
+        <shape android:shape="rectangle">
+            <solid android:color="@color/background_card" />
+            <!-- Curved corners for the white part -->
+            <corners android:topLeftRadius="140dp"
+                android:topRightRadius="140dp" />
+        </shape>
+        <!-- Push the white part down from the top, ensuring it starts lower -->
+        <gravity android:layout_gravity="bottom"/>
+        <padding android:bottom="-400dp" />
+    </item>
+
+</layer-list>

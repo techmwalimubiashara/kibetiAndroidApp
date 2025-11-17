@@ -1,0 +1,160 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@drawable/landing_background"
+    tools:context=".landingPageTask.ui.LandingPageActivity">
+
+
+    <ImageView
+        android:id="@+id/planImage"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_marginStart="20dp"
+        android:contentDescription="people with plans"
+        android:src="@drawable/img3"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/tvLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        layout_constraintBottom_toTopOf="@id/otherLayout"
+        app:layout_constraintTop_toBottomOf="@id/planImage">
+
+        <TextView
+            android:id="@+id/descriptionText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Master money habits that will "
+            android:textAlignment="center"
+            android:textColor="@color/grey"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/descriptionText2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="make you wealthy."
+            android:textAlignment="center"
+            android:textColor="@color/grey"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/descriptionText3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Earn from multiple sources, spend with purpose\nand enjoy life."
+            android:textAlignment="center"
+            android:textColor="@color/grey"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/descriptionText10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Simple, friendly, and personalized"
+            android:textAlignment="center"
+            android:textColor="@color/grey"
+            android:textSize="16sp" />
+
+
+        <TextView
+            android:id="@+id/descriptionText4"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="to you😊"
+            android:textAlignment="center"
+            android:textColor="@color/grey"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/tryForFreeButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/button_rectangle_line"
+            android:backgroundTint="@null"
+            android:text="Try Kibeti for free"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/haveAccountButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="17dp"
+            android:background="@drawable/button_gray"
+            android:backgroundTint="@null"
+            android:text="I Already Have an Account"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tryForFreeButton"
+            app:layout_constraintWidth_percent="0.8"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/otherLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_marginBottom="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvLayout"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="0.1"/>
+        <TextView
+            android:id="@+id/howPlannerAppWorks"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="15dp"
+            android:text="How does Kibeti work?"
+            android:textAlignment="center"
+            android:textColor="@color/grey"
+            android:textSize="14sp"
+            android:visibility="gone"
+           />
+
+        <TextView
+            android:id="@+id/privacyPolicyText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="10dp"
+            android:text="By trying Kibeti, you agree to the Privacy Policy\n and Terms of Service."
+            android:textAlignment="center"
+            android:textColor="@color/grey"
+            android:textSize="12sp"
+             />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

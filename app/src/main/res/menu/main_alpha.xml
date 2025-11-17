@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/background"
+    >
+
+    <item
+        android:id="@+id/settingReset"
+        android:icon="@drawable/nav_settings"
+        android:orderInCategory="100"
+        android:title="Resetting"/>
+    <item
+        android:id="@+id/action_share"
+        android:icon="@drawable/nav_share"
+        android:orderInCategory="100"
+        android:title="Share"/>
+    <item
+        android:id="@+id/about"
+        android:icon="@drawable/nav_about"
+        android:orderInCategory="100"
+        android:title="About App"/>
+    <item
+        android:id="@+id/feedback"
+        android:icon="@drawable/nav_about"
+        android:orderInCategory="100"
+        android:title="Feedback"/>
+    <item
+        android:id="@+id/logout"
+        android:icon="@drawable/nav_logout"
+        android:orderInCategory="100"
+        android:title="Logout"/>
+</menu>

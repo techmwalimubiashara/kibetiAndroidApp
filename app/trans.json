@@ -1,0 +1,136 @@
+{
+	"Body":
+	{
+		"stkCallback":
+		{
+			"MerchantRequestID":"6a86-453e-a95a-82e262aff71841210719",
+			"CheckoutRequestID":"ws_CO_21122024182154647721887006",
+			"ResultCode":0,
+			"ResultDesc":"The service request is processed successfully.",
+			"CallbackMetadata":
+			{
+				"Item":
+				[
+					{
+					"Name":"Amount",
+					"Value":300.00
+					},
+					{
+						"Name":"MpesaReceiptNumber",
+						"Value":"SLL9C6G3P7"
+					},
+					{
+						"Name":"TransactionDate",
+						"Value":20241221182210
+					},
+					{
+						"Name":"PhoneNumber",
+						"Value":254721887006
+					}
+				]
+			}
+		}
+	}
+}
+{
+	"Body":
+	{
+		"stkCallback":
+		{
+		"MerchantRequestID":"1031-4120-a98f-836c7f99b6d364146082",
+	"CheckoutRequestID":"ws_CO_21122024184258480705689876",
+"ResultCode":1037,
+"ResultDesc":"DS timeout user cannot be reached"
+}
+}
+}
+{
+	"Body":
+	{
+		"stkCallback":
+		{
+		"MerchantRequestID":"a3ce-46b1-8db4-fb6595bb7f7b17073250",
+	"CheckoutRequestID":"ws_CO_21122024184419498708650409",
+"ResultCode":1032,
+"ResultDesc":"Request cancelled by user"
+}
+}
+}
+{
+	"Body":
+	{
+		"stkCallback":
+		{
+		"MerchantRequestID":"2188-4541-925d-996d30cd15a577167710",
+	"CheckoutRequestID":"ws_CO_27122024181306190708650409",
+"ResultCode":2001,
+"ResultDesc":"The initiator information is invalid."
+}
+}
+}
+{
+	"Body":
+	{
+		"stkCallback":
+		{
+			"MerchantRequestID":"58db-42ab-bf94-6f8562d78b6212295750",
+			"CheckoutRequestID":"ws_CO_27122024181422673708650409",
+			"ResultCode":0,
+			"ResultDesc":"The service request is processed successfully.",
+			"CallbackMetadata":
+			{
+				"Item":
+				[
+					{
+						"Name":"Amount",
+						"Value":1.00
+					},
+					{
+						"Name":"MpesaReceiptNumber",
+						"Value":"SLR527P1KP"
+					},
+					{
+						"Name":"TransactionDate",
+						"Value":20241227181432
+					},
+					{
+						"Name":"PhoneNumber",
+						"Value":254708650409
+					}
+				]
+			}
+		}
+	}
+}
+
+{"Body":{
+	"stkCallback":
+	{
+		"MerchantRequestID":"10730-12882999-1",
+		"CheckoutRequestID":"ws_CO_14072022132527864708650409",
+		"ResultCode":0,
+		"ResultDesc":"The service request is processed successfully.",
+		"CallbackMetadata":{
+			"Item":[
+				{
+				"Name":"Amount",
+			"Value":1
+		},{
+		"Name":"MpesaReceiptNumber",
+	"Value":"QGE8G4VTJE"
+},
+{
+"Name":"TransactionDate",
+"Value":20220714132541
+},
+{
+"Name":"PhoneNumber",
+"Value":254708650409
+}
+]
+		}
+	}
+}
+}
+{
+	"Body":{"stkCallback":{"MerchantRequestID":"29582-24897547-1","CheckoutRequestID":"ws_CO_14072022132722715708650409","ResultCode":0,"ResultDesc":"The service request is processed successfully.","CallbackMetadata":{"Item":[{"Name":"Amount","Value":1},{"Name":"MpesaReceiptNumber","Value":"QGE5G513ZZ"},{"Name":"TransactionDate","Value":20220714132745},{"Name":"PhoneNumber","Value":254708650409}]}}}}

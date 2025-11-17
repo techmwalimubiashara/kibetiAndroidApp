@@ -1,0 +1,161 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background">
+
+    <!-- Screen Title -->
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:text="Your Goal Progress"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:background="@color/primary_orange"
+        android:elevation="4dp"/>
+
+    <!-- Subtitle -->
+    <TextView
+        android:id="@+id/tvSubtitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Click on a goal to update progress"
+        android:textSize="18sp"
+        android:textColor="@color/text_color"
+        android:gravity="center"
+       android:layout_marginTop="20dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:orientation="vertical">
+
+    <!-- Card for Goal 1 -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardGoal1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        app:cardElevation="8dp"
+        app:cardCornerRadius="12dp"
+        app:cardBackgroundColor="@color/white"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tvGoal1Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
+
+            <com.google.android.material.progressindicator.CircularProgressIndicator
+                android:id="@+id/progressBarGoal1"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:max="100"
+                android:progress="0"
+                app:indicatorColor="@color/primary_orange"
+                app:trackColor="@color/red"
+                app:indicatorSize="150dp"
+                app:trackThickness="20dp"
+                android:layout_marginTop="10dp"/>
+
+
+            <TextView
+                android:id="@+id/tvProgressGoal1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0%"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:layout_marginTop="10dp"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Card for Goal 2 -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardGoal2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        app:cardElevation="8dp"
+        app:cardCornerRadius="12dp"
+        app:cardBackgroundColor="@color/white"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tvGoal2Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
+
+            <com.google.android.material.progressindicator.CircularProgressIndicator
+                android:id="@+id/progressBarGoal2"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:max="100"
+                android:progress="0"
+                app:indicatorColor="@color/primary_orange"
+                app:trackColor="@color/red"
+                app:indicatorSize="150dp"
+                app:trackThickness="20dp"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:id="@+id/tvProgressGoal2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0%"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:layout_marginTop="10dp"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.7"
+            />
+    <Button
+        android:id="@+id/btnComplete"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:textAllCaps="false"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:text="Complete my wealth journey today     "
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:clickable="true"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/button_background"
+        />
+    </LinearLayout>
+</LinearLayout>

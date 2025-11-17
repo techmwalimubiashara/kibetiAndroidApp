@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="350dp"
+    android:layout_height="500dp"
+    android:background="@drawable/round_corners_white"
+    android:padding="15dp"
+    android:layout_gravity="bottom|center_horizontal">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.18">
+
+            <TextView
+                android:id="@+id/tvHeading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:text="Upgrade your account"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/_13ssp"
+                android:textStyle="bold" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/txtclose"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="end"
+            android:background="@drawable/cart_background"
+            android:gravity="center"
+            android:text="X"
+            android:textColor="@color/text_color"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:src="@drawable/ic_lock"
+        android:layout_marginTop="30dp"
+        />
+
+    <TextView
+        android:id="@+id/tvInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Upgrade your account to access this service"
+        android:textSize="16dp"
+        android:gravity="center"
+        android:layout_margin="30dp"
+        />
+    <Button
+        android:id="@+id/upgradeBtn"
+        android:layout_width="150dp"
+        android:layout_height="35dp"
+        android:text="Upgrade Account"
+        android:textAllCaps="false"
+        android:layout_marginTop="30dp"
+        android:textSize="@dimen/_9ssp"
+        android:textColor="@color/white"
+        android:background="@drawable/button_rectangle_line"
+        android:backgroundTint="@color/primary_orange"
+        android:layout_gravity="center"
+        />
+
+</LinearLayout>

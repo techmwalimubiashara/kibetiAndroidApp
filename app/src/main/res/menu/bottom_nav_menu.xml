@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/home"
+        android:title="Home"
+        android:icon="@drawable/nav_home"/>
+
+    <item android:id="@+id/refer"
+        android:title="Refer &amp; Earn"
+        android:icon="@drawable/nav_dollar"/>
+
+    <item android:id="@+id/spending"
+        android:title="Learning"
+        android:icon="@drawable/nav_calculate"
+        android:iconTint="@color/grey"/>
+    <item
+        android:id="@+id/setting"
+        android:icon="@drawable/ic_more"
+        android:title="More"/>
+</menu>

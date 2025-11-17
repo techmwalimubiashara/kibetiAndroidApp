@@ -1,0 +1,73 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".SpendingFragment"
+    android:background="@color/background_card"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/imBackLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background_card"
+        android:visibility="gone"
+        android:padding="16dp">
+        <ImageButton
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/background_card"
+            android:contentDescription="Back button"
+            android:src="@drawable/ic_arrow_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Tracking your spending"
+            android:textSize="17dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginStart="16dp"
+            android:textStyle="bold"
+            android:textColor="@color/text_color"
+            app:layout_constraintStart_toEndOf="@+id/backButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <com.google.android.material.tabs.TabLayout
+        android:layout_width="match_parent"
+        android:layout_height="34dp"
+        android:id="@+id/tablayout"
+        app:tabIndicatorColor="@color/primary_orange"
+        app:tabSelectedTextColor="@color/primary_orange"
+        app:tabTextColor="@color/text_color"
+        app:tabBackground="@color/background_card"
+        app:tabTextAppearance="@style/tabText"
+        app:tabMode="fixed"
+        android:layout_below="@+id/imBackLayout"
+        >
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Inflow"/>
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Outflow"/>
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Report"/>
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/view_pager"
+        android:layout_below="@+id/tablayout"/>
+
+</RelativeLayout>

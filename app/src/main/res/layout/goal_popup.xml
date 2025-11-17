@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="560dp"
+    android:layout_gravity="bottom|center_horizontal"
+    android:background="@drawable/round_corners_white"
+    android:orientation="vertical"
+    android:padding="15dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.18">
+
+            <TextView
+                android:id="@+id/tvHeading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:text="Goal"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/_12ssp"
+                android:textStyle="bold" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/txtclose"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="end"
+            android:background="@drawable/cart_background"
+            android:gravity="center"
+            android:text="X"
+            android:textColor="@color/text_color"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvItem1"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:text="Target Amount"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/_12ssp" />
+
+            <EditText
+                android:id="@+id/edItem1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:backgroundTint="@color/primary_green"
+                android:enabled="false"
+                android:hint="Amount"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:textColor="@color/primary_orange"
+                android:textColorHint="@color/lavander"
+                android:textSize="@dimen/_12ssp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvItem2"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:text="Target Date"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/_12ssp" />
+
+            <EditText
+                android:id="@+id/edItem2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:backgroundTint="@color/primary_green"
+                android:enabled="false"
+                android:hint="Amount"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:textColor="@color/primary_orange"
+                android:textColorHint="@color/lavander"
+                android:textSize="@dimen/_12ssp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvItem3"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:text="Daily Saving"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/_12ssp" />
+
+            <EditText
+                android:id="@+id/edItem3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:backgroundTint="@color/primary_green"
+                android:enabled="false"
+                android:hint="Amount"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:textColor="@color/primary_orange"
+                android:textColorHint="@color/lavander"
+                android:textSize="@dimen/_12ssp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvItem4"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:text="Weekly Saving"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/_12ssp" />
+
+            <EditText
+                android:id="@+id/edItem4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:backgroundTint="@color/primary_green"
+                android:enabled="false"
+                android:hint="Amount"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:textColor="@color/primary_orange"
+                android:textColorHint="@color/lavander"
+                android:textSize="@dimen/_12ssp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:text="Monthly Saving"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/_12ssp" />
+
+            <EditText
+                android:id="@+id/edItem5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:backgroundTint="@color/primary_green"
+                android:enabled="false"
+                android:hint="Amount"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:textColor="@color/primary_orange"
+                android:textColorHint="@color/lavander"
+                android:textSize="@dimen/_12ssp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:text="Quarterly Saving"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/_12ssp" />
+
+            <EditText
+                android:id="@+id/edItem6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:backgroundTint="@color/primary_green"
+                android:enabled="false"
+                android:hint="Amount"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:textColor="@color/primary_orange"
+                android:textColorHint="@color/lavander"
+                android:textSize="@dimen/_12ssp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:text="Semi-Annual saving"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/_12ssp" />
+
+            <EditText
+                android:id="@+id/edItem7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:backgroundTint="@color/primary_green"
+                android:hint="Amount"
+                android:importantForAutofill="no"
+                android:inputType="number"
+                android:textColor="@color/primary_orange"
+                android:textColorHint="@color/lavander"
+                android:textSize="@dimen/_12ssp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:text="Annual Saving"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/_12ssp" />
+
+            <EditText
+                android:id="@+id/edItem8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:backgroundTint="@color/primary_green"
+                android:enabled="false"
+                android:hint="Amount"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:textColor="@color/primary_orange"
+                android:textColorHint="@color/lavander"
+                android:textSize="@dimen/_12ssp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/idBtnDelete"
+                android:layout_width="120dp"
+                android:layout_height="35dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/button_rectangle_line"
+                android:text="Delete"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_9ssp"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/idBtnSave"
+                android:layout_width="120dp"
+                android:layout_height="35dp"
+                android:background="@drawable/button_rectangle_line"
+                android:text="Ok"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_9ssp" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

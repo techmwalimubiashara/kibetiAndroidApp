@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/background_card"
+        app:cardCornerRadius="@dimen/_6sdp"
+        app:cardElevation="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="5dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/_10sdp"
+            android:paddingLeft="@dimen/_20sdp"
+            android:paddingTop="@dimen/_8sdp"
+            android:paddingEnd="@dimen/_16sdp"
+            android:paddingRight="@dimen/_16sdp"
+            android:paddingBottom="@dimen/_8sdp">
+
+
+            <TextView
+                android:id="@+id/cat_label"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:text="From: "
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/_10ssp"
+                app:layout_constraintStart_toStartOf="@+id/nameTv"
+                app:layout_constraintTop_toBottomOf="@+id/nameTv" />
+
+            <TextView
+                android:id="@+id/startDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="North SylvanLand"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/_10ssp"
+                app:layout_constraintBottom_toBottomOf="@+id/cat_label"
+                app:layout_constraintStart_toEndOf="@+id/cat_label"
+                app:layout_constraintTop_toTopOf="@+id/cat_label" />
+            <TextView
+                android:id="@+id/bal_label"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_12sdp"
+                android:layout_marginRight="5dp"
+                android:paddingRight="5dp"
+                android:text="Amnt:"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/_10ssp"
+                app:layout_constraintBottom_toBottomOf="@+id/nameTv"
+                app:layout_constraintStart_toEndOf="@+id/nameTv"
+                app:layout_constraintTop_toTopOf="@+id/nameTv"
+                app:layout_constraintEnd_toEndOf="parent" />
+            <TextView
+                android:id="@+id/amountTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:text="KES 0.0"
+                android:textColor="@color/primary_orange"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintBottom_toBottomOf="@+id/bal_label"
+                app:layout_constraintStart_toEndOf="@+id/bal_label"
+                app:layout_constraintTop_toTopOf="@+id/bal_label"
+                />
+
+            <TextView
+                android:id="@+id/nameTv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="This Account Card"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/cash_bal_label"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:paddingRight="5dp"
+                android:text="Bal: "
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/_10ssp"
+                app:layout_constraintStart_toStartOf="@+id/bal_label"
+                app:layout_constraintTop_toBottomOf="@+id/bal_label" />
+
+            <TextView
+                android:id="@+id/cash_bal_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:text="KES 0"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/_10ssp"
+                app:layout_constraintBottom_toBottomOf="@+id/cash_bal_label"
+                app:layout_constraintStart_toEndOf="@+id/cash_bal_label"
+                app:layout_constraintTop_toTopOf="@+id/cash_bal_label" />
+
+            <TextView
+                android:id="@+id/imageLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:text="To: "
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/_10ssp"
+                app:layout_constraintStart_toStartOf="@+id/cat_label"
+                app:layout_constraintTop_toBottomOf="@+id/cat_label" />
+
+            <TextView
+                android:id="@+id/endDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="North SylvanLand"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/_10ssp"
+                app:layout_constraintBottom_toBottomOf="@+id/imageLocation"
+                app:layout_constraintStart_toEndOf="@+id/imageLocation"
+                app:layout_constraintTop_toTopOf="@+id/imageLocation" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

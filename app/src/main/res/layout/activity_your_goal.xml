@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fitsSystemWindows="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".YourGoalActivity">
+
+    <ProgressBar
+        android:id="@+id/progressbar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:max="100"
+        android:backgroundTint="@color/primary_green"
+        android:indeterminateTint="@color/primary_orange"
+        android:layout_marginTop="7dp"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="30dp"
+            android:text="Your number one financial goal"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/_13ssp"
+            android:textStyle="bold"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="20dp"
+            >
+            <TextView
+                android:id="@+id/tvErrGoalName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textColor="@color/red"
+                android:textSize="@dimen/_12ssp"
+                android:gravity="center_horizontal"
+                />
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="20dp"
+        >
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Your Goal"
+            android:textColor="@color/grey"
+            android:textSize="@dimen/_12ssp"
+            />
+
+        <Spinner
+            android:id="@+id/idEdtGoalName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="10dp"
+            android:importantForAutofill="no"
+            android:textSize="@dimen/_12ssp"
+            android:textColor="@color/primary_orange"
+            android:textColorHint="@color/lavander"
+            android:backgroundTint="@color/primary_green"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="20dp"
+        >
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Amount in KES"
+            android:textColor="@color/grey"
+            android:textSize="@dimen/_12ssp"
+            />
+        <EditText
+            android:id="@+id/idEdtGoalAmount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="10dp"
+            android:hint="KES 1000,000"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            android:textSize="@dimen/_12ssp"
+            android:textColor="@color/primary_orange"
+            android:textColorHint="@color/lavander"
+            android:backgroundTint="@color/primary_green"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="20dp"
+        >
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Target Time (Years)"
+            android:textColor="@color/grey"
+            android:textSize="@dimen/_13ssp"
+            />
+        <EditText
+            android:id="@+id/idEdtGoalPeroid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
+            android:hint="Target Time in Years"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            android:textColor="@color/primary_orange"
+            android:textColorHint="@color/lavander"
+            android:backgroundTint="@color/primary_green"
+            android:textSize="@dimen/_12sdp"/>
+    </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="10dp"
+            android:gravity="center_horizontal"
+            >
+            <Button
+                android:id="@+id/idBtnCancel"
+                android:layout_width="150dp"
+                android:layout_height="35dp"
+                android:layout_margin="10dp"
+                android:text="Reset"
+                android:textAllCaps="false"
+                android:background="@drawable/button_rectangle_line"
+                android:textColor="@color/white"
+                />
+            <Button
+                android:id="@+id/idBtnSubmit"
+                android:layout_width="150dp"
+                android:layout_height="35dp"
+                android:layout_margin="10dp"
+                android:text="Calculate Savings"
+                android:textSize="@dimen/_9ssp"
+                android:textAllCaps="false"
+                android:background="@drawable/button_rectangle_line"
+                android:textColor="@color/white"
+                />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/savingPlanTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Your goal will be best achieved with the following savings plan."
+            android:layout_margin="10dp"
+            android:textSize="@dimen/_12ssp"
+            android:gravity="center_horizontal"
+            android:textColor="@color/text_color"
+            />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:layout_marginLeft="@dimen/_12sdp"
+            android:layout_marginRight="@dimen/_8sdp"
+            app:cardBackgroundColor="@color/background"
+            app:cardCornerRadius="@dimen/_8sdp"
+            app:cardElevation="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/_10sdp"
+                android:paddingLeft="@dimen/_40sdp"
+                android:paddingTop="@dimen/_16sdp"
+                android:paddingEnd="@dimen/_16sdp"
+                android:paddingRight="@dimen/_16sdp"
+                android:paddingBottom="@dimen/_11sdp">
+
+                <TextView
+                    android:id="@+id/annuallyamountTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="KES 0"
+                    android:textColor="@color/primary_orange"
+                    android:textSize="@dimen/_12ssp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/nameTv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Annually"
+                    android:textSize="@dimen/_12ssp"
+                    android:textColor="@color/grey"
+                    app:layout_constraintEnd_toStartOf="@+id/annuallyamountTv"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:layout_marginLeft="@dimen/_12sdp"
+            android:layout_marginRight="@dimen/_12sdp"
+            app:cardBackgroundColor="@color/background"
+            app:cardCornerRadius="@dimen/_14sdp"
+            app:cardElevation="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/_10sdp"
+                android:paddingLeft="@dimen/_40sdp"
+                android:paddingTop="@dimen/_11sdp"
+                android:paddingEnd="@dimen/_16sdp"
+                android:paddingRight="@dimen/_16sdp"
+                android:paddingBottom="@dimen/_11sdp">
+
+                <TextView
+                    android:id="@+id/monthlyamountTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="KES 0"
+                    android:textColor="@color/primary_orange"
+                    android:textSize="@dimen/_12ssp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/monthlyTv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Monthly"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/_12ssp"
+                    app:layout_constraintEnd_toStartOf="@+id/monthlyamountTv"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:layout_marginLeft="@dimen/_12sdp"
+            android:layout_marginRight="@dimen/_12sdp"
+            app:cardBackgroundColor="@color/background"
+            app:cardCornerRadius="@dimen/_14sdp"
+            app:cardElevation="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/_10sdp"
+                android:paddingLeft="@dimen/_40sdp"
+                android:paddingTop="@dimen/_11sdp"
+                android:paddingEnd="@dimen/_16sdp"
+                android:paddingRight="@dimen/_16sdp"
+                android:paddingBottom="@dimen/_11sdp">
+
+                <TextView
+                    android:id="@+id/weeklyamountTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="KES 0"
+                    android:textColor="@color/primary_orange"
+                    android:textSize="@dimen/_12ssp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/weeklyTv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Weekly"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/_12ssp"
+                    app:layout_constraintEnd_toStartOf="@+id/weeklyamountTv"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:layout_marginLeft="@dimen/_12sdp"
+            android:layout_marginRight="@dimen/_12sdp"
+            app:cardBackgroundColor="@color/background"
+            app:cardCornerRadius="@dimen/_14sdp"
+            app:cardElevation="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/_10sdp"
+                android:paddingLeft="@dimen/_40sdp"
+                android:paddingTop="@dimen/_11sdp"
+                android:paddingEnd="@dimen/_16sdp"
+                android:paddingRight="@dimen/_16sdp"
+                android:paddingBottom="@dimen/_11sdp">
+
+                <TextView
+                    android:id="@+id/dailyamountTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="KES 0"
+                    android:textColor="@color/primary_orange"
+                    android:textSize="@dimen/_12ssp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/dailyTv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Daily"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/_12ssp"
+                    app:layout_constraintEnd_toStartOf="@+id/dailyamountTv"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/idTipsName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="10dp"
+            android:text=""
+            android:textColor="@color/primary_green"
+            android:textSize="@dimen/_13ssp"
+            android:gravity="center_horizontal"
+            />
+    </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

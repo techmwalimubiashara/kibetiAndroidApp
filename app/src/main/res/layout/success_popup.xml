@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/dialog_background"
+    android:padding="24dp"
+    android:elevation="8dp"
+    android:gravity="center"
+    android:layout_margin="20dp">
+
+    <!-- Success Icon -->
+    <ImageView
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:src="@drawable/ic_success"
+        android:contentDescription="Success Icon"
+        android:layout_gravity="center"
+        android:background="@drawable/ic_check_circle"
+        android:padding="12dp"/>
+
+    <!-- Success Title -->
+    <TextView
+        android:id="@+id/success_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Success"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_marginTop="16dp"
+        android:layout_gravity="center"/>
+
+    <!-- Success Message -->
+    <TextView
+        android:id="@+id/success_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Success demo dialog"
+        android:textSize="16sp"
+        android:textColor="@color/grey"
+        android:layout_marginTop="8dp"
+        android:layout_gravity="center"/>
+
+    <!-- Okay Button -->
+    <Button
+        android:id="@+id/btn_okay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Okay"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/teal_700"
+        android:layout_marginTop="16dp"
+        android:layout_gravity="center"/>
+</LinearLayout>

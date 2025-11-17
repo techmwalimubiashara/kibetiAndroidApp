@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".MakeSubscriptionalPayment">
+    <LinearLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="20dp"
+        android:orientation="vertical"
+        >
+        <ProgressBar
+            android:id="@+id/progressbar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:max="100"
+            android:visibility="gone"
+            android:backgroundTint="@color/primary_green"
+            android:indeterminateTint="@color/primary_orange"
+            android:layout_marginTop="7dp"/>
+        <TextView
+            android:id="@+id/tvHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textAlignment="center"
+            android:text=""
+            android:textColor="@color/primary_orange"
+            android:textSize="@dimen/_18ssp"
+            />
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="230dp"
+            android:layout_height="60dp"
+            app:srcCompat="@drawable/lipa"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            />
+
+        <TextView
+            android:id="@+id/tvAmount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:textAlignment="center"
+            android:text=""
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/_15ssp"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="20dp"
+            android:orientation="horizontal">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Phone Number"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/_14ssp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.18">
+
+                <EditText
+                    android:id="@+id/phoneNo"
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:backgroundTint="@color/lavander"
+                    android:hint="0712345678"
+                    android:importantForAutofill="no"
+                    android:inputType="number"
+                    android:textColor="@color/primary_orange"
+                    android:textColorHint="@color/lavander"
+                    android:textSize="@dimen/_14ssp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="1dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/backBtn"
+                android:layout_width="160dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:background="@drawable/button_rectangle_line"
+                android:text="Logout"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_10ssp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/makePaymentBtn"
+                android:layout_width="160dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:background="@drawable/button_rectangle_line"
+                android:onClick="payment"
+                android:text="Initiate Payment"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_10ssp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="90dp"
+            android:layout_marginBottom="10dp"
+            android:text='For any feedback about accessing your account, please tap \"Feedback\" to reach to us'
+            android:textAlignment="center"
+            android:textColor="@color/grey"
+            android:textSize="@dimen/_11ssp" />
+
+        <TextView
+            android:id="@+id/tvFeedback"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:text='@string/feedback'
+            android:textAlignment="center"
+            android:textColor="@color/primary_orange"
+            android:textSize="@dimen/_14ssp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="20dp"
+        android:orientation="vertical"
+        android:visibility="gone"
+        >
+        <ProgressBar
+            android:id="@+id/progressbar1"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:max="100"
+            android:visibility="gone"
+            android:backgroundTint="@color/primary_green"
+            android:indeterminateTint="@color/primary_orange"
+            android:layout_marginTop="7dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textAlignment="center"
+            android:text="Treasure Chest Payment"
+            android:textColor="@color/primary_orange"
+            android:textSize="@dimen/_18ssp"
+            />
+        <ImageView
+            android:id="@+id/successImg"
+            android:layout_width="300dp"
+            android:layout_height="100dp"
+            app:srcCompat="@drawable/lipa"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textAlignment="center"
+            android:text="Payment Initiated Successfully!"
+            android:textColor="@color/primary_green"
+            android:textSize="@dimen/_15ssp"
+            />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:textAlignment="center"
+            android:text='Payment has been successfully initiated, Please enter pin and tap \"Refresh\" to upgrade your account'
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/_13ssp"
+            />
+
+
+        <Button
+            android:id="@+id/refreshPaymentBtn"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="70dp"
+            android:layout_gravity="center"
+            android:text="Refresh"
+            android:onClick="refresh"
+            android:textStyle="bold"
+            android:textAllCaps="false"
+            android:background="@drawable/button_rectangle_line"
+            android:textColor="@color/white"
+            />
+
+        <TextView
+            android:id="@+id/tvBackPayment"
+            android:layout_width="match_parent"
+            android:layout_height="26dp"
+            android:layout_marginTop="1dp"
+            android:text='Back'
+            android:textAlignment="center"
+            android:textColor="@color/primary_green"
+            android:textSize="@dimen/_15ssp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:textAlignment="center"
+            android:text='For any feedback about accessing your account, please tap \"Feedback\" to reach to us'
+            android:textColor="@color/grey"
+            android:textSize="@dimen/_12ssp"
+            />
+
+    </LinearLayout>
+
+</RelativeLayout>

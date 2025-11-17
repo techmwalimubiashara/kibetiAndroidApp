@@ -1,0 +1,45 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/background_card"
+    tools:context=".CashActivtity">
+
+
+    <com.google.android.material.tabs.TabLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:id="@+id/tablayout"
+        app:tabIndicatorColor="@color/primary_orange"
+        app:tabMode="fixed"
+        app:tabBackground="@color/background_card"
+        app:tabSelectedTextColor="@color/primary_orange"
+        app:tabTextColor="@color/text_color"
+        app:tabTextAppearance="@style/tabText"
+
+        >
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Inflow"
+            />
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Outflow"/>
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Report"/>
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/view_pager"
+        android:layout_below="@+id/tablayout"/>
+
+</RelativeLayout>

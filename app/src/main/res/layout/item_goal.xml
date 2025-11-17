@@ -1,0 +1,143 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="goal"
+            type="com.mb.kibeti.room.Goal" />
+        <variable
+            name="viewModel"
+            type="com.mb.kibeti.GoalViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/goalName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text='@{goal.goalName != null ? goal.goalName : "Goal Name"}'
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/goalAmount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text='@{goal.amountNeeded != null ? "Target: $" + String.valueOf(goal.amountNeeded) : "Target: $0.00"}'
+            android:textSize="16sp"
+            android:textColor="@android:color/darker_gray"
+            app:layout_constraintTop_toBottomOf="@+id/goalName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:id="@+id/goalDates"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text='@{String.format("From %1$s to %2$s", goal.startDate, goal.endDate)}'
+            android:textSize="14sp"
+            android:textColor="@android:color/darker_gray"
+            app:layout_constraintTop_toBottomOf="@+id/goalAmount"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:id="@+id/dailySavings"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text='@{viewModel.calculateSavingsPlan(goal)["daily"] != null ? "Daily: $" + viewModel.calculateSavingsPlan(goal)["daily"] : "Daily: N/A"}'
+            android:textSize="16sp"
+            android:textColor="@android:color/darker_gray"
+            app:layout_constraintTop_toBottomOf="@+id/goalDates"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:id="@+id/weeklySavings"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text='@{viewModel.calculateSavingsPlan(goal)["weekly"] != null ? "Weekly: $" + viewModel.calculateSavingsPlan(goal)["weekly"] : "Weekly: N/A"}'
+            android:textSize="16sp"
+            android:textColor="@android:color/darker_gray"
+            app:layout_constraintTop_toBottomOf="@+id/dailySavings"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:id="@+id/monthlySavings"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text='@{viewModel.calculateSavingsPlan(goal)["monthly"] != null ? "Monthly: $" + viewModel.calculateSavingsPlan(goal)["monthly"] : "Monthly: N/A"}'
+            android:textSize="14sp"
+            android:textColor="@android:color/darker_gray"
+            app:layout_constraintTop_toBottomOf="@+id/weeklySavings"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:id="@+id/annualSavings"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text='@{viewModel.calculateSavingsPlan(goal)["annual"] != null ? "Annually: $" + viewModel.calculateSavingsPlan(goal)["annual"] : "Annually: N/A"}'
+            android:textSize="14sp"
+            android:textColor="@android:color/darker_gray"
+            app:layout_constraintTop_toBottomOf="@+id/monthlySavings"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp" />
+
+        <LinearLayout
+            android:id="@+id/buttonGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/annualSavings"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <Button
+                android:id="@+id/editGoalButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Edit"
+                android:onClick="@{() -> viewModel.updateGoal(goal)}"
+                android:layout_marginEnd="8dp" />
+
+            <Button
+                android:id="@+id/deleteGoalButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Delete"
+                android:onClick="@{() -> viewModel.deleteGoalById(goal.id)}" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/downloadButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="Get PDF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/buttonGroup"
+            app:layout_constraintHorizontal_bias="0.493"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginBottom="15dp"
+            android:layout_marginEnd="6dp"
+            app:layout_constraintTop_toBottomOf="@+id/annualSavings"
+            app:layout_constraintVertical_bias="0.0" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

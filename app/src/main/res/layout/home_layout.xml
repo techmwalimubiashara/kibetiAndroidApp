@@ -1,0 +1,1320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary_orange"
+    tools:context=".HomeFragment">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!--                <ImageView-->
+            <!--                    android:id="@+id/imageView"-->
+            <!--                    android:layout_width="@dimen/_40sdp"-->
+            <!--                    android:layout_height="@dimen/_40sdp"-->
+            <!--                    android:layout_marginTop="13dp"-->
+            <!--                    android:layout_marginEnd="13dp"-->
+            <!--                    app:layout_constraintBottom_toBottomOf="parent"-->
+            <!--                    app:layout_constraintEnd_toEndOf="parent"-->
+            <!--                    app:layout_constraintTop_toTopOf="parent"-->
+            <!--                    app:srcCompat="@drawable/profile" />-->
+
+            <TextView
+                android:id="@+id/usernameTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="@dimen/_16ssp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="50dp"
+            android:layout_weight="0.9"
+            android:background="@drawable/white_background">
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/tvCashflows"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginEnd="32dp"
+                    android:text="Financial Tools"
+                    android:textColor="@color/primary_orange"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.18">
+
+                        <ImageView
+                            android:id="@+id/view1"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/give_money" />
+
+                        <TextView
+                            android:id="@+id/textView91"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="Lumpsum"
+                            android:textAlignment="center"
+                            android:textColor="@color/text_color"
+                            android:textSize="10sp"
+                            app:layout_constraintEnd_toEndOf="@+id/view1"
+                            app:layout_constraintStart_toStartOf="@+id/view1"
+                            app:layout_constraintTop_toBottomOf="@+id/view1" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.18">
+
+                        <ImageView
+                            android:id="@+id/view2"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/invest" />
+
+                        <TextView
+                            android:id="@+id/textView92"
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="My side hustle"
+                            android:textAlignment="center"
+                            android:textColor="@color/text_color"
+                            android:textSize="10sp"
+                            app:layout_constraintEnd_toEndOf="@+id/view2"
+                            app:layout_constraintStart_toStartOf="@+id/view2"
+                            app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.18">
+
+                        <ImageView
+                            android:id="@+id/view34"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:onClick="showOutflowChart"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/graph" />
+
+
+                        <TextView
+                            android:id="@+id/textView934"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="My Analysis"
+                            android:textAlignment="center"
+                            android:textColor="@color/text_color"
+                            android:textSize="10sp"
+                            app:layout_constraintEnd_toEndOf="@+id/view34"
+                            app:layout_constraintStart_toStartOf="@+id/view34"
+                            app:layout_constraintTop_toBottomOf="@+id/view34" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.15">
+
+                        <ImageView
+                            android:id="@+id/imShopping"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/cart" />
+
+
+                        <TextView
+                            android:id="@+id/shoppingTV"
+                            android:layout_width="60dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="Shop Bila Stress"
+                            android:textAlignment="center"
+                            android:textColor="@color/text_color"
+                            android:textSize="10sp"
+                            app:layout_constraintEnd_toEndOf="@+id/imShopping"
+                            app:layout_constraintStart_toStartOf="@+id/imShopping"
+                            app:layout_constraintTop_toBottomOf="@+id/imShopping" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.18"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:id="@+id/imBudget"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/budget" />
+
+
+                        <TextView
+                            android:id="@+id/budgetTV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="Budget"
+                            android:textAlignment="center"
+                            android:textColor="@color/text_color"
+                            android:textSize="11sp"
+                            app:layout_constraintEnd_toEndOf="@+id/imBudget"
+                            app:layout_constraintStart_toStartOf="@+id/imBudget"
+                            app:layout_constraintTop_toBottomOf="@+id/imBudget" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.18"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:id="@+id/investImg"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/investment" />
+
+
+                        <TextView
+                            android:id="@+id/investTV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="Investment"
+                            android:textAlignment="center"
+                            android:textColor="@color/text_color"
+                            android:textSize="11sp"
+                            app:layout_constraintEnd_toEndOf="@+id/investImg"
+                            app:layout_constraintStart_toStartOf="@+id/investImg"
+                            app:layout_constraintTop_toBottomOf="@+id/investImg" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.10"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/tvOthers"
+                            android:layout_width="60dp"
+                            android:layout_height="wrap_content"
+                            android:onClick="listOther"
+                            android:text="See more"
+                            android:textAlignment="center"
+                            android:textColor="@color/primary_green"
+                            android:textSize="11sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/tvTools"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="32dp"
+                    android:text="Tools"
+                    android:textColor="@color/primary_orange"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+
+                <LinearLayout
+                    android:id="@+id/layoutothers"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:orientation="horizontal"
+
+                        >
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.18"
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:id="@+id/view"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:srcCompat="@drawable/goal" />
+
+
+                            <TextView
+                                android:id="@+id/textView9"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:text="My Goal"
+                                android:textAlignment="center"
+                                android:textColor="@color/text_color"
+                                android:textSize="11sp"
+                                app:layout_constraintEnd_toEndOf="@+id/view"
+                                app:layout_constraintStart_toStartOf="@+id/view"
+                                app:layout_constraintTop_toBottomOf="@+id/view" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.18"
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:id="@+id/view3"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:srcCompat="@drawable/spending" />
+
+
+                            <TextView
+                                android:id="@+id/textView93"
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:text="My Analysis"
+                                android:textAlignment="center"
+                                android:textColor="@color/text_color"
+                                android:textSize="10sp"
+                                app:layout_constraintEnd_toEndOf="@+id/view3"
+                                app:layout_constraintStart_toStartOf="@+id/view3"
+                                app:layout_constraintTop_toBottomOf="@+id/view3" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:orientation="horizontal">
+
+                        <!--        <androidx.constraintlayout.widget.ConstraintLayout-->
+                        <!--            android:layout_width="0dp"-->
+                        <!--            android:layout_height="wrap_content"-->
+                        <!--            android:layout_weight="0.18">-->
+
+                        <!--            <ImageView-->
+                        <!--                android:id="@+id/investImg"-->
+                        <!--                android:layout_width="40dp"-->
+                        <!--                android:layout_height="40dp"-->
+                        <!--                app:layout_constraintEnd_toEndOf="parent"-->
+                        <!--                app:layout_constraintStart_toStartOf="parent"-->
+                        <!--                app:layout_constraintTop_toTopOf="parent"-->
+                        <!--                app:srcCompat="@drawable/spending" />-->
+
+
+                        <!--            <TextView-->
+                        <!--                android:id="@+id/investTV"-->
+                        <!--                android:layout_width="wrap_content"-->
+                        <!--                android:layout_height="wrap_content"-->
+                        <!--                android:layout_marginTop="10dp"-->
+                        <!--                android:text="Investment"-->
+                        <!--                android:textAlignment="center"-->
+                        <!--                android:textColor="@color/text_color"-->
+                        <!--                android:textSize="11sp"-->
+                        <!--                app:layout_constraintEnd_toEndOf="@+id/investImg"-->
+                        <!--                app:layout_constraintStart_toStartOf="@+id/investImg"-->
+                        <!--                app:layout_constraintTop_toBottomOf="@+id/investImg" />-->
+                        <!--        </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.15">
+
+                            <ImageView
+                                android:id="@+id/imTracker"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:srcCompat="@drawable/ic_location_tracker" />
+
+
+                            <TextView
+                                android:id="@+id/trackerTV"
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:text="Budget Tracker"
+                                android:textAlignment="center"
+                                android:textColor="@color/text_color"
+                                android:textSize="10sp"
+                                app:layout_constraintEnd_toEndOf="@+id/imTracker"
+                                app:layout_constraintStart_toStartOf="@+id/imTracker"
+                                app:layout_constraintTop_toBottomOf="@+id/imTracker" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="32dp"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/textVi"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Hot Deals Special for You"
+                        android:textColor="@color/primary_orange"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginRight="15dp"
+                    android:orientation="vertical"
+                   >
+
+                    <Button
+                        android:layout_width="140dp"
+                        android:layout_height="40dp"
+                        android:onClick="showInflowChart"
+                        android:text="Inflow Chart"
+                        android:textAllCaps="false"
+                        android:visibility="gone"
+                        />
+
+                    <Button
+                        android:id="@+id/btnEod"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:onClick="viewEndDay"
+                        android:text="Click here to track your wealth"
+                        android:background="@drawable/button_rectangle_line"
+                        android:textAllCaps="false"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:textSize="17dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="20dp"
+                    android:orientation="horizontal">
+
+                    <!--                        <androidx.constraintlayout.widget.ConstraintLayout-->
+                    <!--                            android:layout_width="0dp"-->
+                    <!--                            android:layout_height="wrap_content"-->
+                    <!--                            android:layout_weight="0.18">-->
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/myGoalCardView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.18"
+                        app:cardBackgroundColor="@color/background_card"
+                        app:cardCornerRadius="15dp"
+                        app:cardElevation="8dp"
+                        app:cardMaxElevation="8dp"
+                        app:cardPreventCornerOverlap="true"
+                        app:cardUseCompatPadding="true"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:layout_weight="0.18">
+
+                            <ImageView
+                                android:id="@+id/imGoalCard"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_margin="7dp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:srcCompat="@drawable/goal" />
+
+                            <TextView
+                                android:id="@+id/tvMyGoals"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:text="My Goals"
+                                android:textAlignment="center"
+                                android:textColor="@color/grey"
+                                android:textSize="15sp"
+                                android:textStyle="bold"
+                                app:layout_constraintEnd_toEndOf="@+id/imGoalCard"
+                                app:layout_constraintStart_toStartOf="@+id/imGoalCard"
+                                app:layout_constraintTop_toBottomOf="@+id/imGoalCard" />
+
+                            <LinearLayout
+                                android:id="@+id/layoutGoalCharts"
+                                android:layout_width="match_parent"
+                                android:layout_height="120dp"
+                                android:orientation="vertical"
+                                app:layout_constraintEnd_toEndOf="@+id/imGoalCard"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/tvMyGoals">
+
+<!--                                <com.github.mikephil.charting.charts.PieChart-->
+
+<!--                                    android:id="@+id/pieChartGoals"-->
+<!--                                    android:layout_width="match_parent"-->
+<!--                                    android:layout_height="110dp"-->
+<!--                                    android:layout_marginStart="10dp"-->
+<!--                                    android:layout_marginEnd="10dp"-->
+<!--                                    android:layout_marginBottom="3dp"-->
+<!--                                    android:visibility="gone" />-->
+
+
+                                <androidx.cardview.widget.CardView
+                                    android:id="@+id/tvGoalNothing"
+                                    android:layout_width="100dp"
+                                    android:layout_height="100dp"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_marginTop="5dp"
+                                    app:cardBackgroundColor="@color/primary_orange"
+                                    app:cardCornerRadius="50dp"
+                                    app:cardElevation="10dp"
+                                    app:layout_constraintBottom_toTopOf="@id/image_response"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:gravity="center"
+                                        android:orientation="vertical">
+
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center_horizontal"
+                                            android:text="Set"
+                                            android:textColor="@color/white"
+                                            android:textSize="16sp"
+                                            android:textStyle="bold" />
+
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="your first"
+                                            android:textColor="@color/white"
+                                            android:textSize="16sp"
+                                            android:textStyle="bold" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text=" goal"
+                                            android:textColor="@color/white"
+                                            android:textSize="16sp"
+                                            android:textStyle="bold" />
+
+
+                                    </LinearLayout>
+
+
+                                </androidx.cardview.widget.CardView>
+
+                                <Button
+                                    android:visibility="gone"
+                                    android:id="@+id/tvGoalSet"
+                                    android:layout_width="120dp"
+                                    android:layout_height="120dp"
+                                    android:layout_gravity="center_horizontal"
+                                    android:background="@drawable/circle"
+                                    android:backgroundTint="@null"
+                                    android:padding="10dp"
+                                    android:text="See My Goals"
+                                    android:textAllCaps="false"
+                                    android:textColor="@color/white"
+                                    android:textSize="16sp"
+                                    />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_margin="2dp"
+                                    android:text="Set your first goal"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/grey"
+                                    android:textSize="14sp"
+                                    android:visibility="gone" />
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/tvGoalAdjust"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="2dp"
+                                android:text="View Goals"
+                                android:textAlignment="center"
+                                android:textColor="@color/grey"
+                                android:textSize="14sp"
+                                android:visibility="gone"
+                                app:layout_constraintEnd_toEndOf="@+id/imGoalCard"
+                                app:layout_constraintStart_toStartOf="@+id/imGoalCard"
+                                app:layout_constraintTop_toBottomOf="@+id/layoutGoalCharts" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <!--                            <TextView-->
+                        <!--                                android:id="@+id/tvMyGoals"-->
+                        <!--                                android:layout_width="match_parent"-->
+                        <!--                                android:layout_height="wrap_content"-->
+                        <!--                                android:layout_marginTop="8dp"-->
+                        <!--                                android:gravity="center_horizontal"-->
+                        <!--                                android:text="My Goals"-->
+                        <!--                                android:textStyle="bold" />-->
+
+
+                    </androidx.cardview.widget.CardView>
+
+                    <!--                        </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/myBudgetCardView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.18"
+                        app:cardBackgroundColor="@color/background_card"
+                        app:cardCornerRadius="15dp"
+                        app:cardElevation="8dp"
+                        app:cardMaxElevation="8dp"
+                        app:cardPreventCornerOverlap="true"
+                        app:cardUseCompatPadding="true"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="180dp"
+                            android:layout_weight="0.18">
+
+                            <ImageView
+                                android:id="@+id/imBudgetCard"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_margin="7dp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:srcCompat="@drawable/budget" />
+
+
+                            <TextView
+                                android:id="@+id/tvMyBudget"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:text="My Budget"
+                                android:textAlignment="center"
+                                android:textColor="@color/grey"
+                                android:textSize="15sp"
+                                android:textStyle="bold"
+                                app:layout_constraintEnd_toEndOf="@+id/imBudgetCard"
+                                app:layout_constraintStart_toStartOf="@+id/imBudgetCard"
+                                app:layout_constraintTop_toBottomOf="@+id/imBudgetCard" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15dp"
+                                android:orientation="vertical"
+                                app:layout_constraintEnd_toEndOf="@+id/imBudgetCard"
+                                app:layout_constraintStart_toStartOf="@+id/imBudgetCard"
+                                app:layout_constraintTop_toBottomOf="@+id/tvMyBudget">
+
+                                <TextView
+                                    android:id="@+id/tvBudgetTarget"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="8dp"
+                                    android:text="Target : 0%"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/grey"
+                                    android:textSize="14sp" />
+
+                                <TextView
+                                    android:id="@+id/tvBudgetActual"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:text="Actual: 0%"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/grey"
+                                    android:textSize="14sp" />
+
+                                <TextView
+                                    android:id="@+id/tvBudgetStatus"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:text="Status : --"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/grey"
+                                    android:textSize="14sp" />
+
+                                <TextView
+                                    android:id="@+id/tvBudgetAdjust"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="8dp"
+                                    android:text="Adjust"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/grey"
+                                    android:textSize="14sp"
+                                    android:visibility="gone" />
+
+                            </LinearLayout>
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <!--                            <TextView-->
+                        <!--                                android:id="@+id/tvMyBudget"-->
+                        <!--                                android:layout_width="match_parent"-->
+                        <!--                                android:layout_height="wrap_content"-->
+                        <!--                                android:layout_marginTop="8dp"-->
+                        <!--                                android:gravity="center_horizontal"-->
+                        <!--                                android:text="My Budget"-->
+                        <!--                                android:textStyle="bold" />-->
+
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginEnd="20dp"
+                    android:orientation="horizontal">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/myInvestmentCardView"
+                        android:layout_width="0dp"
+                        android:layout_height="210dp"
+                        android:layout_weight="0.18"
+                        app:cardBackgroundColor="@color/background_card"
+                        app:cardCornerRadius="15dp"
+                        app:cardElevation="5dp"
+                        app:cardMaxElevation="8dp"
+                        app:cardPreventCornerOverlap="true"
+                        app:cardUseCompatPadding="true"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/investconst"
+                            android:layout_width="match_parent"
+                            android:layout_height="180dp">
+
+                            <ImageView
+                                android:id="@+id/investImgCard"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_margin="7dp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:srcCompat="@drawable/investment" />
+
+
+                            <TextView
+                                android:id="@+id/tvMyInvest"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:text="My Investments"
+                                android:textAlignment="center"
+                                android:textColor="@color/grey"
+                                android:textSize="15sp"
+                                android:textStyle="bold"
+                                app:layout_constraintEnd_toEndOf="@+id/investImgCard"
+                                app:layout_constraintStart_toStartOf="@+id/investImgCard"
+                                app:layout_constraintTop_toBottomOf="@+id/investImgCard" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                app:layout_constraintEnd_toEndOf="@+id/investImgCard"
+                                app:layout_constraintStart_toStartOf="@+id/investImgCard"
+                                app:layout_constraintTop_toBottomOf="@+id/tvMyInvest">
+
+                                <TextView
+                                    android:id="@+id/tvInvestTarget"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="8dp"
+                                    android:text="Target : 0%"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/grey"
+                                    android:textSize="14sp"
+                                    android:visibility="gone" />
+
+                                <TextView
+
+                                    android:id="@+id/tvInvestActual"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Actual: 0%"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/grey"
+                                    android:textSize="14sp"
+                                    android:visibility="gone" />
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="100dp"
+                                    android:layout_height="100dp"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:cardElevation="10dp"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_gravity="center_horizontal"
+                                    app:layout_constraintBottom_toTopOf="@id/image_response"
+
+                                    app:cardBackgroundColor="@color/primary_orange"
+                                    app:cardCornerRadius="50dp">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical"
+                                        android:gravity="center"
+                                        android:layout_gravity="center">
+
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="Top"
+                                            android:layout_gravity="center_horizontal"
+                                            android:textSize="16sp"
+                                            android:textColor="@color/white"
+                                            android:textStyle="bold"/>
+
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="investment"
+                                            android:textSize="16sp"
+                                            android:textColor="@color/white"
+                                            android:textStyle="bold"/>
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text=" today"
+                                            android:textSize="16sp"
+                                            android:textColor="@color/white"
+                                            android:textStyle="bold"/>
+
+
+
+                                    </LinearLayout>
+
+
+
+                                </androidx.cardview.widget.CardView>
+                                <Button
+                                    android:visibility="gone"
+                                    android:id="@+id/tvInvestStatus"
+                                    android:layout_width="120dp"
+                                    android:layout_height="120dp"
+                                    android:layout_gravity="center_horizontal"
+                                    android:background="@drawable/circle"
+                                    android:backgroundTint="@null"
+                                    android:text="Top investment today"
+                                    android:textAllCaps="false"
+                                    android:textColor="@color/white"
+                                    android:padding="5dp"
+                                    android:textSize="14sp" />
+
+                                <TextView
+                                    android:visibility="gone"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="8dp"
+                                    android:background="@drawable/circle"
+                                    android:text="Top investment today"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/grey"
+                                    android:textSize="14sp" />
+
+                                <TextView
+                                    android:id="@+id/tvInvestAdjust"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="8dp"
+                                    android:text="Adjust"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/grey"
+                                    android:textSize="14sp"
+                                    android:visibility="gone" />
+
+                            </LinearLayout>
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <!--                            <TextView-->
+                        <!--                                android:id="@+id/tvMyInvest"-->
+                        <!--                                android:layout_width="match_parent"-->
+                        <!--                                android:layout_height="wrap_content"-->
+                        <!--                                app:layout_constraintEnd_toEndOf="parent"-->
+                        <!--                                app:layout_constraintStart_toStartOf="parent"-->
+                        <!--                                app:layout_constraintTop_toTopOf="parent"-->
+                        <!--                                android:text="My Investments"-->
+                        <!--                                android:textStyle="bold"-->
+                        <!--                                android:gravity="center_horizontal"-->
+                        <!--                                android:layout_marginTop="8dp"-->
+                        <!--                                />-->
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/myBusinessCardView"
+                        android:layout_width="0dp"
+                        android:layout_height="210dp"
+                        android:layout_weight="0.18"
+                        app:cardBackgroundColor="@color/background_card"
+                        app:cardCornerRadius="15dp"
+                        app:cardElevation="8dp"
+                        app:cardMaxElevation="8dp"
+                        app:cardPreventCornerOverlap="true"
+                        app:cardUseCompatPadding="true"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="180dp">
+
+                            <ImageView
+                                android:id="@+id/imBusinessCard"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_margin="7dp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:srcCompat="@drawable/bus" />
+
+
+                            <TextView
+                                android:id="@+id/tvMyBusiness"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:text="My Business"
+                                android:textAlignment="center"
+                                android:textColor="@color/grey"
+                                android:textSize="15sp"
+                                android:textStyle="bold"
+                                app:layout_constraintEnd_toEndOf="@+id/imBusinessCard"
+                                app:layout_constraintStart_toStartOf="@+id/imBusinessCard"
+                                app:layout_constraintTop_toBottomOf="@+id/imBusinessCard" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/tvMyBusiness">
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="100dp"
+                                    android:layout_height="100dp"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:cardElevation="10dp"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_gravity="center_horizontal"
+                                    app:layout_constraintBottom_toTopOf="@id/image_response"
+
+                                    app:cardBackgroundColor="@color/primary_orange"
+                                    app:cardCornerRadius="50dp">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical"
+                                        android:gravity="center"
+                                        android:layout_gravity="center">
+
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="How"
+                                            android:layout_gravity="center_horizontal"
+                                            android:textSize="16sp"
+                                            android:textColor="@color/white"
+                                            android:textStyle="bold"/>
+
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="to make"
+                                            android:textSize="16sp"
+                                            android:textColor="@color/white"
+                                            android:textStyle="bold"/>
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="money"
+                                            android:textColor="@color/white"
+                                            android:textSize="16sp"
+                                            android:textStyle="bold" />
+
+
+
+                                    </LinearLayout>
+
+
+
+                                </androidx.cardview.widget.CardView>
+                                <Button
+                                    android:visibility="gone"
+                                    android:id="@+id/btnMyBusiness"
+                                    android:layout_width="120dp"
+                                    android:layout_height="120dp"
+                                    android:layout_gravity="center_horizontal"
+                                    android:background="@drawable/circle"
+                                    android:backgroundTint="@null"
+                                    android:text="How to make money"
+                                    android:textAllCaps="false"
+                                    android:textColor="@color/white"
+                                    android:padding="5dp"
+                                    android:textSize="14sp" />
+
+                                <TextView
+                                    android:id="@+id/tvMyBusinessComingSoon"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="8dp"
+                                    android:gravity="center"
+                                    android:text="How to make money"
+                                    android:textColor="@color/grey"
+                                    android:textSize="14sp"
+                                    android:visibility="gone"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                            </LinearLayout>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+<!--                        <com.github.mikephil.charting.charts.PieChart-->
+<!--                            android:id="@+id/idChartBusiness"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="150dp"-->
+<!--                            android:layout_marginStart="10dp"-->
+<!--                            android:layout_marginTop="20dp"-->
+<!--                            android:layout_marginEnd="10dp"-->
+<!--                            android:layout_marginBottom="10dp"-->
+<!--                            android:padding="20dp"-->
+<!--                            android:visibility="gone"-->
+<!--                            app:layout_constraintEnd_toEndOf="@+id/tvMyBusiness"-->
+<!--                            app:layout_constraintStart_toStartOf="@+id/tvMyBusiness"-->
+<!--                            app:layout_constraintTop_toBottomOf="@+id/tvMyBusiness" />-->
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.9" />
+
+                <LinearLayout
+                    android:id="@+id/layoutTransaction"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="22dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="32dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tvTransaction"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Your spending:Pls allocate for accurate reports"
+                        android:textColor="@color/primary_orange"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvAllocateAll"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="15dp"
+                        android:text="Tap here to allocate all transaction to 'Others'"
+                        android:textAlignment="center"
+                        android:textColor="@color/primary_green"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+
+                <ListView
+                    android:id="@+id/listview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="20dp"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:orientation="horizontal">
+
+<!--                    <com.smarteist.autoimageslider.SliderView-->
+<!--                        android:id="@+id/slider"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="120dp"-->
+<!--                        android:layout_centerInParent="true"-->
+<!--                        android:layout_marginLeft="15dp"-->
+<!--                        android:layout_marginTop="20dp"-->
+<!--                        android:layout_marginRight="15dp"-->
+<!--                        android:visibility="gone"-->
+<!--                        app:sliderAnimationDuration="600"-->
+<!--                        app:sliderAutoCycleDirection="back_and_forth"-->
+<!--                        app:sliderIndicatorAnimationDuration="600"-->
+<!--                        app:sliderIndicatorMargin="200dp"-->
+<!--                        app:sliderIndicatorOrientation="horizontal"-->
+<!--                        app:sliderIndicatorPadding="3dp"-->
+<!--                        app:sliderIndicatorRadius="@dimen/_1sdp"-->
+<!--                        app:sliderIndicatorSelectedColor="@color/primary_green"-->
+<!--                        app:sliderIndicatorUnselectedColor="@color/primary_orange"-->
+<!--                        app:sliderScrollTimeInSec="3" />-->
+
+                </LinearLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:layout_editor_absoluteX="30dp">
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout2"
+                        android:layout_width="match_parent"
+                        android:layout_height="90dp"
+                        android:layout_marginStart="65dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="65dp"
+                        android:background="@drawable/cart_background"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:id="@+id/textView2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:text="Money Available  Monthly"
+                            android:textAlignment="center"
+                            android:textColor="@color/primary_orange"
+                            android:textSize="@dimen/_12ssp"
+                            app:layout_constraintBottom_toTopOf="@+id/textView3"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:gravity="center">
+
+                            <TextView
+                                android:id="@+id/monthlyAmount"
+                                android:layout_width="180dp"
+                                android:layout_height="30dp"
+                                android:gravity="center_horizontal"
+                                android:text="0"
+                                android:textColor="@color/primary_green"
+                                android:textSize="@dimen/_15ssp"
+
+                                />
+
+                            <ImageView
+                                android:id="@+id/blur"
+                                android:layout_width="180dp"
+                                android:layout_height="30dp"
+                                android:gravity="center_horizontal"
+                                android:visibility="gone"
+                                app:srcCompat="@drawable/blur" />
+
+                            <ImageView
+                                android:id="@+id/eye_close"
+                                android:layout_width="23dp"
+                                android:layout_height="23dp"
+                                app:srcCompat="@drawable/eye_off" />
+
+                            <ImageView
+                                android:id="@+id/eye_open"
+                                android:layout_width="23dp"
+                                android:layout_height="23dp"
+                                android:visibility="gone"
+                                app:srcCompat="@drawable/eye" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+        </ScrollView>
+
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

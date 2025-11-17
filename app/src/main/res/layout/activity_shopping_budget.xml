@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background"
+    android:padding="16dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:hint="Budgeted Amount"
+            android:textColorHint="@color/primary_green"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etBudget"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="numberDecimal"
+                android:textColor="@color/primary_orange"
+                android:backgroundTint="@color/background"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+    <TextView
+        android:id="@+id/tvRemainingBudget"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/_15sdp"
+        android:layout_marginTop="16dp"
+        android:text="Remaining Budget: 0.00" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:text="Shop"
+            android:textSize="@dimen/_12sdp"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="10dp"
+            />
+
+        <Spinner
+            android:id="@+id/idShop"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:textSize="@dimen/_12ssp"
+            android:importantForAutofill="no"
+            android:textColor="@color/primary_orange"
+            android:textColorHint="@color/lavander"
+            android:backgroundTint="@color/primary_green"
+            />
+    </LinearLayout>
+
+    <AutoCompleteTextView
+        android:id="@+id/etItemName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:hint="Enter Item name"
+        android:textColorHint="@color/primary_green"
+        android:completionThreshold="1"
+       />
+    <com.google.android.material.textfield.TextInputLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:hint="Enter Item Price"
+        android:textColorHint="@color/primary_green"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etItemPrice"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="numberDecimal"
+            android:textColor="@color/primary_orange"
+            android:backgroundTint="@color/background"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:hint="Quantity"
+        android:textColorHint="@color/primary_green"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etQnty"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="number"
+            android:textColor="@color/primary_orange"
+            android:backgroundTint="@color/background"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <Button
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:id="@+id/btnAddItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="Add Item" />
+
+    <Button
+        android:visibility="gone"
+        android:id="@+id/btnRemoveItem"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Remove Item" />
+
+    <ListView
+        android:id="@+id/lvItems"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+</LinearLayout>

@@ -1,0 +1,35 @@
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/background_card"
+    tools:context=".MainActivity">
+
+    <item
+        android:id="@+id/daily"
+        android:title="Daily"
+        />
+
+    <item
+        android:id="@+id/weekly"
+        android:title="Weekly"
+          />
+    <item
+        android:id="@+id/monthly"
+        android:title="Monthly"
+          />
+    <item
+        android:id="@+id/quarterly"
+        android:title="Quarterly"
+          />
+    <item
+        android:id="@+id/semi_annually"
+        android:title="Semi Annually"
+        />
+    <item
+        android:id="@+id/annually"
+        android:title="Annually"
+          />
+
+
+</menu>

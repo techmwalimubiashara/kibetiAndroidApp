@@ -1,0 +1,639 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".YourGoalActivity">
+    <ProgressBar
+        android:id="@+id/progressbar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:max="100"
+        android:backgroundTint="@color/primary_green"
+        android:indeterminateTint="@color/primary_orange"
+        android:layout_marginTop="7dp"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="30dp"
+                android:text="Return on Investment"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/_14ssp"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                >
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Capital Required"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/_11ssp"
+                    />
+
+                <EditText
+                    android:id="@+id/idEdtCapital"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:hint="Capital Required"
+                    android:importantForAutofill="no"
+                    android:inputType="number"
+                    android:textColor="@color/primary_orange"
+                    android:textColorHint="@color/lavander"
+                    android:backgroundTint="@color/primary_green"
+                    android:textSize="@dimen/_12ssp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="20dp"
+                >
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:text="Expected monthly profits (after expenses)"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/_11ssp"
+                    />
+                <EditText
+                    android:id="@+id/idEdtMonthlyInflow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:textSize="@dimen/_12ssp"
+                    android:hint="Ksh 1,000,000"
+                    android:importantForAutofill="no"
+                    android:inputType="number"
+                    android:textColor="@color/primary_orange"
+                    android:textColorHint="@color/lavander"
+                    android:backgroundTint="@color/primary_green"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="20dp"
+                >
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:text="Duration of project (Years)"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/_11ssp"
+                    />
+                <EditText
+                    android:id="@+id/idEdtYears"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:hint="Time in Years"
+                    android:textSize="@dimen/_12ssp"
+                    android:importantForAutofill="no"
+                    android:inputType="number"
+                    android:textColor="@color/primary_orange"
+                    android:textColorHint="@color/lavander"
+                    android:backgroundTint="@color/primary_green"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="20dp"
+                >
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Escalation/Growth"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/_11ssp"
+                    />
+
+                <EditText
+                    android:id="@+id/idEdtGrowth"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:hint="% Growth/Year"
+                    android:importantForAutofill="no"
+                    android:textSize="@dimen/_12ssp"
+                    android:inputType="text"
+                    android:textColor="@color/primary_orange"
+                    android:textColorHint="@color/lavander"
+                    android:backgroundTint="@color/primary_green"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="20dp"
+                >
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="My Profits % (what I want to earn)"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/_11ssp"
+                    />
+                <EditText
+                    android:id="@+id/idEdtRRRMargin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:hint="Annual profit in %"
+                    android:importantForAutofill="no"
+                    android:textSize="@dimen/_12ssp"
+                    android:inputType="number"
+                    android:textColor="@color/primary_orange"
+                    android:textColorHint="@color/lavander"
+                    android:backgroundTint="@color/primary_green"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:orientation="horizontal"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="20dp"
+                >
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:text="My payback period (When I want my capital back)"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/_11ssp"
+                    />
+                <EditText
+                    android:id="@+id/idEdtPeriod"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:hint="In Years"
+                    android:importantForAutofill="no"
+                    android:inputType="number"
+                    android:textSize="@dimen/_12ssp"
+                    android:textColor="@color/primary_orange"
+                    android:textColorHint="@color/lavander"
+                    android:backgroundTint="@color/primary_green"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:gravity="center_horizontal"
+                >
+                <Button
+                    android:id="@+id/idBtnCancel"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="Reset"
+                    android:textAllCaps="false"
+                    android:textSize="@dimen/_9ssp"
+                    android:background="@drawable/button_rectangle_line"
+                    android:textColor="@color/white"
+                    />
+                <Button
+                    android:id="@+id/idBtnSubmit"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="Should I invest?"
+                    android:textAllCaps="false"
+                    android:textSize="@dimen/_9ssp"
+                    android:background="@drawable/button_rectangle_line"
+                    android:textColor="@color/white"
+                    />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/savingPlanTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Invest if all checked green "
+                android:layout_margin="10dp"
+                android:textSize="@dimen/_14ssp"
+                android:gravity="center_horizontal"
+                android:textColor="@color/text_color"
+                />
+
+            <LinearLayout
+                android:layout_width="366dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="20dp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivNPV"
+                    android:layout_width="60dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="@dimen/_1sdp"
+                    android:src="@drawable/ic_quiz"
+
+                    />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_16sdp"
+                    android:layout_marginLeft="@dimen/_16sdp"
+                    app:cardBackgroundColor="@color/background"
+                    app:cardCornerRadius="@dimen/_6sdp"
+                    app:cardElevation="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="270dp"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="@dimen/_7sdp"
+                        android:paddingLeft="@dimen/_10sdp"
+                        android:paddingTop="@dimen/_2sdp"
+                        android:paddingEnd="@dimen/_10sdp"
+                        android:paddingRight="@dimen/_11sdp"
+                        android:paddingBottom="@dimen/_2sdp">
+
+                        <TextView
+                            android:id="@+id/tvNPV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="20dp"
+                            android:layout_marginBottom="20dp"
+                            android:text="0.0"
+                            android:textColor="@color/primary_orange"
+                            android:textSize="@dimen/_12ssp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/nameTv"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="NPV"
+                            android:textColor="@color/input_hint"
+                            android:textSize="@dimen/_13ssp"
+                            android:textStyle="bold"
+                            app:layout_constraintEnd_toStartOf="@+id/tvNPV"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/imageLocation"
+                            android:layout_width="@dimen/_12sdp"
+                            android:layout_height="@dimen/_12sdp"
+                            android:layout_marginTop="@dimen/_4sdp"
+                            android:src="@drawable/ic_location"
+                            android:tint="@color/background"
+                            app:layout_constraintStart_toStartOf="@+id/nameTv"
+                            app:layout_constraintTop_toBottomOf="@+id/nameTv" />
+
+                        <TextView
+                            android:id="@+id/ageTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Invest if greater than zero"
+                            android:textSize="@dimen/_11ssp"
+                            app:layout_constraintBottom_toBottomOf="@+id/imageLocation"
+                            app:layout_constraintStart_toEndOf="@+id/imageLocation"
+                            app:layout_constraintTop_toTopOf="@+id/imageLocation" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="366dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="20dp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivIRR"
+                    android:layout_width="60dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="@dimen/_1sdp"
+                    android:src="@drawable/ic_quiz"
+
+                    />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_16sdp"
+                    android:layout_marginLeft="@dimen/_16sdp"
+                    app:cardBackgroundColor="@color/background"
+                    app:cardCornerRadius="@dimen/_6sdp"
+                    app:cardElevation="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="270dp"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="@dimen/_7sdp"
+                        android:paddingLeft="@dimen/_10sdp"
+                        android:paddingTop="@dimen/_2sdp"
+                        android:paddingEnd="@dimen/_10sdp"
+                        android:paddingRight="@dimen/_11sdp"
+                        android:paddingBottom="@dimen/_2sdp">
+
+                        <TextView
+                            android:id="@+id/tvIRR"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0.0"
+                            android:textColor="@color/primary_orange"
+                            android:textSize="@dimen/_12ssp"
+                            android:layout_marginEnd="20dp"
+                            android:layout_marginBottom="@dimen/_20sdp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/nameIRRTv"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="IRR"
+                            android:textColor="@color/input_hint"
+                            android:textSize="@dimen/_13ssp"
+                            android:textStyle="bold"
+                            app:layout_constraintEnd_toStartOf="@+id/tvIRR"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/imageLocation1"
+                            android:layout_width="@dimen/_12sdp"
+                            android:layout_height="@dimen/_12sdp"
+                            android:layout_marginTop="@dimen/_4sdp"
+                            android:src="@drawable/ic_location"
+                            android:tint="@color/background"
+                            app:layout_constraintStart_toStartOf="@+id/nameIRRTv"
+                            app:layout_constraintTop_toBottomOf="@+id/nameIRRTv" />
+
+                        <TextView
+                            android:id="@+id/IRRTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Invest if IRR is greater than 'My profit %'"
+                            android:textSize="@dimen/_11ssp"
+                            app:layout_constraintBottom_toBottomOf="@+id/imageLocation1"
+                            app:layout_constraintStart_toEndOf="@+id/imageLocation1"
+                            app:layout_constraintTop_toTopOf="@+id/imageLocation1" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="366dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="20dp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivPBP"
+                    android:layout_width="60dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="@dimen/_1sdp"
+                    android:src="@drawable/ic_quiz"
+
+                    />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_16sdp"
+                    android:layout_marginLeft="@dimen/_16sdp"
+                    app:cardBackgroundColor="@color/background"
+                    app:cardCornerRadius="@dimen/_6sdp"
+                    app:cardElevation="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="270dp"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="@dimen/_7sdp"
+                        android:paddingLeft="@dimen/_10sdp"
+                        android:paddingTop="@dimen/_2sdp"
+                        android:paddingEnd="@dimen/_10sdp"
+                        android:paddingRight="@dimen/_11sdp"
+                        android:paddingBottom="@dimen/_2sdp">
+
+                        <TextView
+                            android:id="@+id/tvPBP"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0.0"
+                            android:textColor="@color/primary_orange"
+                            android:textSize="@dimen/_12ssp"
+                            android:layout_marginEnd="20dp"
+                            android:layout_marginBottom="@dimen/_20sdp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/nameIRRTv1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="Payback Period"
+                            android:textColor="@color/input_hint"
+                            android:textSize="@dimen/_13ssp"
+                            android:textStyle="bold"
+                            app:layout_constraintEnd_toStartOf="@+id/tvPBP"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/imageLocation2"
+                            android:layout_width="@dimen/_12sdp"
+                            android:layout_height="@dimen/_12sdp"
+                            android:layout_marginTop="@dimen/_4sdp"
+                            android:src="@drawable/ic_location"
+                            android:tint="@color/background"
+                            app:layout_constraintStart_toStartOf="@+id/nameIRRTv1"
+                            app:layout_constraintTop_toBottomOf="@+id/nameIRRTv1" />
+
+                        <TextView
+                            android:id="@+id/IRRTv1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Invest if less than your standard"
+                            android:textSize="@dimen/_11ssp"
+                            app:layout_constraintBottom_toBottomOf="@+id/imageLocation2"
+                            app:layout_constraintStart_toEndOf="@+id/imageLocation2"
+                            app:layout_constraintTop_toTopOf="@+id/imageLocation2" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="366dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="20dp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivProfitability"
+                    android:layout_width="60dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="@dimen/_1sdp"
+                    android:src="@drawable/ic_quiz"
+                    />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_16sdp"
+                    android:layout_marginLeft="@dimen/_16sdp"
+                    app:cardBackgroundColor="@color/background"
+                    app:cardCornerRadius="@dimen/_6sdp"
+                    app:cardElevation="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="270dp"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="@dimen/_7sdp"
+                        android:paddingLeft="@dimen/_10sdp"
+                        android:paddingTop="@dimen/_2sdp"
+                        android:paddingEnd="@dimen/_10sdp"
+                        android:paddingRight="@dimen/_11sdp"
+                        android:paddingBottom="@dimen/_2sdp">
+
+                        <TextView
+                            android:id="@+id/tvProfitability"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0.0"
+                            android:textColor="@color/primary_orange"
+                            android:textSize="@dimen/_12ssp"
+                            android:layout_marginEnd="20dp"
+                            android:layout_marginBottom="@dimen/_20sdp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/nameIRRTv2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="Profitability Index"
+                            android:textColor="@color/input_hint"
+                            android:textSize="@dimen/_13ssp"
+                            android:textStyle="bold"
+                            app:layout_constraintEnd_toStartOf="@+id/tvProfitability"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/imageLocation3"
+                            android:layout_width="@dimen/_12sdp"
+                            android:layout_height="@dimen/_12sdp"
+                            android:layout_marginTop="@dimen/_4sdp"
+                            android:src="@drawable/ic_location"
+                            android:tint="@color/background"
+                            app:layout_constraintStart_toStartOf="@+id/nameIRRTv2"
+                            app:layout_constraintTop_toBottomOf="@+id/nameIRRTv2" />
+
+                        <TextView
+                            android:id="@+id/IRRTv2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Invest if greater than 1"
+                            android:textSize="@dimen/_11ssp"
+                            app:layout_constraintBottom_toBottomOf="@+id/imageLocation3"
+                            app:layout_constraintStart_toEndOf="@+id/imageLocation3"
+                            app:layout_constraintTop_toTopOf="@+id/imageLocation3" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/idTipsName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:text=""
+                android:textColor="@color/primary_green"
+                android:textSize="@dimen/_15ssp"
+                android:gravity="center_horizontal"
+                />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

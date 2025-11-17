@@ -1,0 +1,512 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".ExpensesFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+
+        >
+
+        <LinearLayout
+            android:id="@+id/layout_expired"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/main"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/background"
+                android:padding="15dp">
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/offer"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginTop="20dp"
+                    app:cardBackgroundColor="@color/red_dull"
+                    app:cardCornerRadius="50dp"
+                    app:cardElevation="10dp"
+                    app:layout_constraintBottom_toTopOf="@id/image_response"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Special"
+                            android:textColor="@color/white"
+                            android:textSize="16dp"
+                            android:textStyle="bold" />
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Offer!"
+                            android:textColor="@color/white"
+                            android:textSize="16dp"
+                            android:textStyle="bold" />
+
+
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+
+                <!-- Image -->
+                <ImageView
+                    android:id="@+id/image_response"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="10dp"
+                    android:contentDescription="Response image"
+                    android:src="@drawable/plant2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/offer" />
+
+                <!-- Heading Text -->
+
+
+                <!-- Body Text -->
+                <TextView
+                    android:id="@+id/tv_body"
+                    android:layout_width="240dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center"
+                    android:text="✅ Track all your mpesa transactions automatically and take control of your spending.
+"
+                    android:textColor="@color/gray_dark"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toTopOf="@+id/tv_body2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/image_response" />
+
+
+                <TextView
+                    android:id="@+id/tv_body2"
+                    android:layout_width="240dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="22dp"
+                    android:gravity="center"
+                    android:text="✅ Get a personalized report on the best investments and increase your streams of income."
+                    android:textColor="@color/gray_dark"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toTopOf="@+id/tv_body3"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_body" />
+
+
+                <TextView
+                    android:id="@+id/tv_body3"
+                    android:layout_width="240dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="22dp"
+                    android:gravity="center"
+                    android:text=" If you have a coupon code, please use it on the next screen and enjoy more discounts!"
+                    android:textColor="@color/gray_dark"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toTopOf="@+id/btnMakePayment"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_body2" />
+
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnMakePayment"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/button_rectangle_line"
+                    android:text="Take me there"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_13ssp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_body3" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_active"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="15dp"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:id="@+id/idFreqSpinner"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+
+                    />
+
+                <TextView
+                    android:id="@+id/timeTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="25dp"
+                    android:text="2,July,2023"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/_12ssp" />
+
+
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/unaccountedAmount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:layout_marginLeft="@dimen/_16sdp"
+                android:layout_marginEnd="@dimen/_4sdp"
+                android:visibility="gone"
+                app:cardBackgroundColor="@color/background_card"
+                app:cardCornerRadius="@dimen/_6sdp"
+                app:cardElevation="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:paddingLeft="@dimen/_20sdp"
+                    android:paddingTop="@dimen/_3sdp"
+                    android:paddingEnd="@dimen/_16sdp"
+                    android:paddingRight="@dimen/_16sdp"
+                    android:paddingBottom="@dimen/_5sdp">
+
+
+                    <TextView
+                        android:id="@+id/nameTv"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Amount not allocated"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/_11ssp"
+                        app:layout_constraintEnd_toStartOf="@+id/currentTv"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/currentTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_12sdp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:layout_marginEnd="@dimen/_8sdp"
+                        android:text="Amount:"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/_10ssp"
+                        app:layout_constraintBottom_toBottomOf="@+id/nameTv"
+                        app:layout_constraintEnd_toStartOf="@+id/statusTv"
+                        app:layout_constraintStart_toEndOf="@+id/nameTv"
+                        app:layout_constraintTop_toTopOf="@+id/nameTv" />
+
+                    <TextView
+                        android:id="@+id/statusTv"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:text="Ksh. 1300.00"
+                        android:textColor="@color/primary_green"
+                        android:textSize="@dimen/_10ssp"
+                        app:layout_constraintBottom_toBottomOf="@+id/currentTv"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/currentTv"
+                        app:layout_constraintTop_toTopOf="@+id/currentTv" />
+
+                    <!--            -->
+                    <!--            <TextView-->
+                    <!--                android:id="@+id/statusTv"-->
+                    <!--                android:layout_width="80dp"-->
+                    <!--                android:layout_height="wrap_content"-->
+                    <!--                android:text="Updated"-->
+                    <!--                android:textColor="@color/primary_green"-->
+                    <!--                android:textSize="@dimen/_9ssp"-->
+                    <!--                app:layout_constraintBottom_toBottomOf="@+id/nameTv"-->
+                    <!--                app:layout_constraintStart_toEndOf="@+id/nameTv"-->
+                    <!--                app:layout_constraintTop_toTopOf="@+id/nameTv"-->
+                    <!--                />-->
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <HorizontalScrollView
+                android:id="@+id/horizontalScrollView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="1dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="1dp"
+                android:layout_marginBottom="1dp"
+                android:foregroundGravity="center_vertical"
+                android:visibility="gone">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_12sdp"
+                    android:layout_marginLeft="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginBottom="@dimen/_6sdp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/todayTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Daily"
+                        android:textColor="@color/grey"
+                        android:textSize="@dimen/_12ssp" />
+
+                    <TextView
+                        android:id="@+id/weekTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_12sdp"
+                        android:text="Weekly"
+                        android:textColor="@color/grey"
+                        android:textSize="@dimen/_12ssp" />
+
+                    <TextView
+                        android:id="@+id/monthTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_12sdp"
+                        android:text="Monthly"
+                        android:textColor="@color/grey"
+                        android:textSize="@dimen/_12ssp" />
+
+                    <TextView
+                        android:id="@+id/quarterTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_12sdp"
+                        android:text="Quarterly"
+                        android:textColor="@color/grey"
+                        android:textSize="@dimen/_12ssp" />
+
+                    <TextView
+                        android:id="@+id/semiannuallyamountTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_12sdp"
+                        android:text="Semi Annually"
+                        android:textColor="@color/grey"
+                        android:textSize="@dimen/_12ssp" />
+
+                    <TextView
+                        android:id="@+id/annuallyamountTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_12sdp"
+                        android:text="Annually"
+                        android:textColor="@color/grey"
+                        android:textSize="@dimen/_12ssp" />
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+
+
+                        <LinearLayout
+                            android:id="@+id/layoutNotFound"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            >
+
+                            <ImageView
+                                android:layout_width="180dp"
+                                android:layout_height="180dp"
+                                app:srcCompat="@drawable/cabinet"
+                                android:visibility="gone"/>
+
+                            <TextView
+                                android:id="@+id/tvNotFound"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="No spending budget found"
+                                android:textAlignment="center"
+                                android:textColor="@color/grey"
+                                android:layout_margin="7dp"
+                                android:textStyle="bold"
+                                android:textSize="@dimen/_15ssp"
+                                android:visibility="gone"
+                                />
+                            <TextView
+                                android:id="@+id/tvNotFoundExplanation"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Please add your budget before adding actual spending"
+                                android:textAlignment="center"
+                                android:textColor="@color/grey"
+                                android:textSize="@dimen/_13ssp"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginBottom="10dp"
+                                />
+
+                            <Button
+                                android:id="@+id/idBtnSubmitCourse"
+                                android:layout_width="match_parent"
+                                android:layout_height="48dp"
+                                android:layout_below="@id/scrollView"
+                                android:layout_marginStart="20dp"
+                                android:layout_marginEnd="20dp"
+                                android:layout_marginBottom="20dp"
+                                android:layout_marginTop="10dp"
+                                android:text="I want to add budget"
+                                android:textSize="14sp"
+                                android:textAllCaps="false"
+                                android:background="@drawable/button_rectangle_line"
+                                android:textColor="@color/white"
+                                android:onClick="addOutflow"
+                                />
+
+                        </LinearLayout>
+
+
+                    <!-- The following is the expandable portion whose visibility is initially set to 'gone'
+                    The parent LinearLayout contains 3 child LinearLayouts that hold a subject name and an icon each -->
+                    <LinearLayout
+                        android:id="@+id/allhidden_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"></LinearLayout>
+
+                    <ListView
+                        android:id="@+id/alllistview"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="5dp"
+                        android:visibility="gone" />
+
+                    <LinearLayout
+                        android:id="@+id/hidden_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"></LinearLayout>
+
+                    <ListView
+                        android:id="@+id/todaylistview"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="5dp"
+                        android:visibility="gone" />
+
+
+                    <!-- The following is the expandable portion whose visibility is initially set to 'gone'
+                    The parent LinearLayout contains 3 child LinearLayouts that hold a subject name and an icon each -->
+                    <LinearLayout
+                        android:id="@+id/hidden_view1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:visibility="gone"></LinearLayout>
+
+                    <ListView
+                        android:id="@+id/weeklistview"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="5dp"
+                        android:visibility="gone" />
+
+
+                    <!-- The following is the expandable portion whose visibility is initially set to 'gone'
+                    The parent LinearLayout contains 3 child LinearLayouts that hold a subject name and an icon each -->
+                    <LinearLayout
+                        android:id="@+id/hidden_view2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"></LinearLayout>
+
+                    <ListView
+                        android:id="@+id/monthlistview"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="5dp"
+                        android:visibility="gone" />
+
+                    <!-- The following is the expandable portion whose visibility is initially set to 'gone'
+                    The parent LinearLayout contains 3 child LinearLayouts that hold a subject name and an icon each -->
+                    <LinearLayout
+                        android:id="@+id/hidden_view3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"></LinearLayout>
+
+                    <ListView
+                        android:id="@+id/quarterlistview"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="5dp"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </ScrollView>
+
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

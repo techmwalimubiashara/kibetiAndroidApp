@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvSelectedDay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="21dp"
+            android:gravity="center"
+            android:textColor="@color/colorPrimary"
+            android:textSize="21sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvTheChallenge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="21dp"
+            android:gravity="center"
+            android:textColor="#000"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvActualRevenue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/colorAccent"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/etTheChallenge"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_margin="21dp"
+            android:background="@drawable/round_corners_black_beta"
+            android:gravity="center"
+            android:hint="Revenue generated today"
+            android:inputType="number"
+            android:maxLength="19"
+            android:textColor="@color/colorPrimary" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="21dp"
+            android:background="@drawable/round_corners_green_alpha"
+            android:gravity="center"
+            android:onClick="Analyse"
+            android:text="Next"
+            android:textAllCaps="false"
+            android:textColor="#fff" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_margin="21dp"
+            android:background="@color/colorAccent" />
+    </LinearLayout>
+</ScrollView>

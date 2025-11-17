@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/background"
+    android:orientation="vertical">
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floating_action_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/colorPrimary"
+        android:layout_gravity="bottom|right"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="70dp"
+        app:elevation="150dp"
+        android:contentDescription="Add Revenue"
+        android:text="Add Revenue"
+        app:srcCompat="@drawable/ic_plus_24"
+        app:tint="@color/white"
+        />
+
+    <LinearLayout
+        android:id="@+id/llHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorPrimary"
+        android:orientation="horizontal"
+        android:weightSum="17">
+
+        <TextView
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_margin="14dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_margin="14dp"
+            android:layout_weight="4"
+            android:text="Date"
+            android:textColor="#fff"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_margin="14dp"
+            android:layout_weight="4"
+            android:text="Target"
+            android:textColor="#fff"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_margin="14dp"
+            android:layout_weight="4"
+            android:text="Actual"
+            android:textColor="#fff"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_margin="14dp"
+            android:layout_weight="4"
+            android:text="Variance"
+            android:textColor="#fff"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/list_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="55dp" />
+
+    <LinearLayout
+        android:id="@+id/llFooter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@color/colorPrimaryDark"
+        android:orientation="horizontal"
+        android:weightSum="17">
+
+        <TextView
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_margin="14dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_margin="14dp"
+            android:layout_weight="4"
+            android:text="Total"
+            android:textColor="#fff"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvCumulativeTargetRevenue"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_margin="14dp"
+            android:layout_weight="4"
+            android:textColor="#fff"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvCumulativeActual"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_margin="14dp"
+            android:layout_weight="4"
+            android:textColor="#fff"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvCumulativeVariance"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_margin="14dp"
+            android:layout_weight="4"
+            android:textColor="#fff"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

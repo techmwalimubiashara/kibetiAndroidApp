@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/cart_background"
+        app:cardCornerRadius="@dimen/_15sdp"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="8dp">
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginBottom="20dp"
+                android:text="How do you want to Invest?"
+                android:textColor="@color/text_black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+                <LinearLayout
+                    android:id="@+id/tvlinearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="520dp"
+                    android:layout_weight="0.8"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+                    app:layout_constraintVertical_weight="0.8">
+
+                    <TextView
+                        android:id="@+id/tvExplanation1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="1-Year Investment Plan"
+                        android:textColor="@color/text_black"
+                        android:textStyle="bold"
+                        android:textSize="20sp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="🔹Method: You invest a fixed amount regularly (daily, weekly, or monthly) over one year."
+                        android:textColor="@color/text_black"
+                        android:textSize="18sp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="🔹 Best For: Those who prefer steady contributions based on what they have at the time."
+                        android:textColor="@color/text_black"
+                        android:textSize="18sp"/>
+
+                    <Button
+                        android:id="@+id/idBtnInvestmentPlan"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/button_rectangle_line"
+                        android:text="I want 1-year investment plan"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_14ssp" />
+
+                    <TextView
+                        android:id="@+id/tvExplanation2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="Lumpsum Investment"
+                        android:textColor="@color/text_black"
+                        android:textStyle="bold"
+                        android:textSize="20sp"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="🔹 Method: You invest a large amount all at once and let it grow over time."
+                        android:textColor="@color/text_black"
+                        android:textSize="18sp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="🔹 Best For: Those with available capital who want to maximize market gains."
+                        android:textColor="@color/text_black"
+                        android:textSize="18sp"/>
+
+                    <Button
+                        android:id="@+id/idBtnLumpsum"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:background="@drawable/button_rectangle_line"
+                        android:layout_marginTop="10dp"
+                        android:text="I have a lumpsum amount to invest"
+                        android:textAllCaps="false"
+                        android:padding="0dp"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_14ssp" />
+
+
+
+
+                </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="5dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                app:layout_constraintVertical_weight="0.2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvlinearLayout">
+
+
+
+
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>

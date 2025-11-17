@@ -1,0 +1,31 @@
+{
+  "project_info": {
+    "project_number": "1088545135014",
+    "project_id": "tcphoneauth",
+    "storage_bucket": "tcphoneauth.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1088545135014:android:4d8cd507b32a2387ded767",
+        "android_client_info": {
+          "package_name": "com.mb.kibeti"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD9Er4PS2-AqVteJPnVihTiPujzHqWpz6c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
+
+

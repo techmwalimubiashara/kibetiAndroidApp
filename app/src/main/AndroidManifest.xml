@@ -1,0 +1,497 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.mb.kibeti">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- <uses-permission android:name="android.permission.READ_PHONE_STATE" /> -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <queries>
+        <package android:name="com.whatsapp" />
+    </queries>
+
+    <meta-data
+        android:name="com.google.android.gms.version"
+        android:value="@integer/google_play_services_version" />
+    <meta-data
+        android:name="com.google.android.geo.API_KEY"
+        android:value="@string/google_api_key" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.NavigationDrawer"
+        tools:targetApi="31">
+        <activity
+            android:name=".DynamicInputActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CashflowAnalysis"
+            android:exported="false"
+            android:theme="@style/Theme.Landing" />
+        <activity
+            android:name=".CashActivtity"
+            android:exported="false"
+            android:label="Add Budget Inflow"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".JourneyMpesaAllocation"
+            android:exported="false"
+            android:parentActivityName=".eod_dashboard.EODFeelingActivity" />
+        <activity
+            android:name=".sms_filter.SupermarketRecipientsActivity"
+            android:exported="true" />
+        <activity
+            android:name=".sms_filter.JoinWhatsappActivity"
+            android:exported="false" />
+        <activity
+            android:name=".sms_filter.whatsapp_number.TipsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".sms_filter.TopRecipientsActivity"
+            android:exported="true" />
+
+        <receiver
+            android:name=".sms_filter.SmsReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".MpesaSpending"
+            android:exported="false"
+            android:parentActivityName=".JourneyMpesaAllocation" />
+        <activity
+            android:name=".goal_tracker.GoalStepsActivity"
+            android:exported="true" />
+        <activity
+            android:name=".goal_tracker.GoalProgressActivity"
+            android:exported="true" />
+        <activity
+            android:name=".goal_tracker.GoalTrackerActivity"
+            android:exported="true"
+            android:label="Track My Goals" />
+        <activity
+            android:name=".smsReaderAutoTask.ConfirmAutoAllocatedTransactions"
+            android:exported="true" />
+        <activity
+            android:name=".eod_dashboard.EODFeelingActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".smsReaderAutoTask.CategoryPromptActivity"
+            android:exported="false" />
+        <activity
+            android:name=".smsReaderAutoTask.ExpenditureActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ChartActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Landing" />
+        <activity
+            android:name=".invest_guide.InputScreenActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Landing" />
+        <activity
+            android:name=".invest_guide.InvestmentModelActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Landing" />
+        <activity
+            android:name=".forgot_password.ResetPasswordActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Landing" />
+        <activity
+            android:name=".landingPageTask.ui.FinanceFeelingActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Landing" />
+        <activity
+            android:name=".landingPageTask.ui.FinanceCrisisResponseActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Landing" />
+        <activity
+            android:name=".landingPageTask.ui.PaymentActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Landing" />
+        <activity
+            android:name=".landingPageTask.ui.FinanceUnsureResponseActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Landing" />
+        <activity
+            android:name=".landingPageTask.ui.ActivityWhatsYourName"
+            android:exported="false"
+            android:theme="@style/Theme.Landing" />
+        <activity
+            android:name=".landingPageTask.ui.FinanceStressedResponseActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Landing" />
+        <activity
+            android:name=".landingPageTask.ui.FinanceThrivingResponseActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Landing" />
+        <activity
+            android:name=".landingPageTask.ui.FinanceStableResponseActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Landing" />
+        <activity
+            android:name=".landingPageTask.ui.LandingPageActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Landing" />
+        <activity
+            android:name=".LoginWithGoogle"
+            android:exported="false" />
+        <activity
+            android:name=".InvestmentProfile"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Landing" />
+        <activity
+            android:name=".InvestmentRecommendationCalculator"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Landing" />
+        <activity
+            android:name=".currency_picker.CurrencyPickerActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Landing" />
+        <activity
+            android:name=".JumpStartActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MySpendingBudget"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Landing" />
+        <activity
+            android:name=".CelebrationPopActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Landing" />
+        <activity
+            android:name=".MyGoalsActivity"
+            android:exported="false"
+            android:label="My Goals"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".screens.GoalPlannerActivity"
+            android:exported="false"
+            android:label="My Investment Journey"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".feedback.screens.FeedbackActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Landing" />
+        <activity
+            android:name=".BudgetTracker"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Landing" />
+        <activity
+            android:name=".SettingGoals"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Landing" />
+        <activity
+            android:name=".GoalActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CompareInvestment"
+            android:exported="false"
+            android:label="Compare Investment"
+            android:parentActivityName=".InvestmentCalculator"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Intro_My_Goal"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".BPMainActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.CollapsingToolbar" />
+        <activity
+            android:name=".RevenueTargetAlternatives"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.CollapsingToolbar" />
+        <activity
+            android:name=".ClientsRetrieve"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.CollapsingToolbar" />
+        <activity
+            android:name=".ClientNew"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".NewBusiness"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".DashboardAlpha"
+            android:parentActivityName=".BPMainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.CollapsingToolbar" />
+        <activity
+            android:name=".Run_Business_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".ChhoseAccountType"
+            android:exported="false" />
+        <activity
+            android:name=".InvestmentCalculator"
+            android:exported="false"
+            android:label="How much can I make?"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Landing" />
+        <activity
+            android:name=".ShoppingBudget"
+            android:exported="false"
+            android:label="Shop bila stress"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ShoppingAssistance"
+            android:exported="false"
+            android:label="Shop bila stress"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Read5SMS"
+            android:exported="false"
+            android:label="Last Mpesa transactions"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PieChartActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CashflowBudget"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Landing" /> <!-- <activity -->
+        <!-- android:name=".TestSMSReciever" -->
+        <!-- android:exported="false" /> -->
+        <activity
+            android:name=".PhoneAuthActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MpesaUpdates"
+            android:exported="false"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".OutflowChart"
+            android:exported="false"
+            android:label="Outflow Analysis"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Message"
+            android:exported="false" />
+        <activity
+            android:name=".ActualsPdfActivity"
+            android:exported="false"
+            android:label="Actuals PDF"
+            android:parentActivityName=".ActualsPdfActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".IntroActivity"
+            android:exported="false" />
+        <activity
+            android:name=".EditLumpsum"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ViewLumpsum"
+            android:exported="false"
+            android:parentActivityName=".LumpsumActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Passcode"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Landing" />
+        <activity
+            android:name=".ViewNotificationActivity"
+            android:exported="false"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AddActualExpensesActivity"
+            android:exported="false"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AddActualActivity"
+            android:exported="false"
+            android:label="Add Actual Income"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".EditInflow"
+            android:exported="false"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".TablayoutWithIconsActivity"
+            android:exported="false"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".NotifyActivity"
+            android:exported="false"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MakeSubscriptionalPayment"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Landing" />
+        <activity
+            android:name=".ChangePassword"
+            android:exported="false"
+            android:label="Change Password"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Makepayment"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Landing" />
+        <activity
+            android:name=".AboutUs"
+            android:exported="false"
+            android:label="About Kibeti"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ExpiredActivty"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Landing" />
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="false"
+            android:parentActivityName=".LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Landing" />
+        <activity
+            android:name=".CashflowPdfActivity"
+            android:exported="false"
+            android:label="Document PDF"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".LumpsumPdfActivity"
+            android:exported="false"
+            android:label="Lumpsum PDF"
+            android:parentActivityName=".LumpsumActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AddLumpsumActivity"
+            android:exported="false"
+            android:label="Add Lumpsum"
+            android:parentActivityName=".LumpsumActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AddOutflowActivity"
+            android:exported="false"
+            android:label="Add Budget Outflow"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AddInflowActivity"
+            android:exported="false"
+            android:label="Add Budget Inflow"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".InvestmentReturnActivity"
+            android:exported="false"
+            android:label="Return On Investment"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".YourGoalActivity"
+            android:exported="false"
+            android:label="Your Goal Today"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".LumpsumActivity"
+            android:exported="false"
+            android:label="Lumpsum"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Landing" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Landing" />
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Landing">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity> <!-- <receiver android:name=".AlarmReceiver" /> -->
+        <!-- &lt;!&ndash;                <receiver&ndash;&gt; -->
+        <!-- &lt;!&ndash;                    android:name=".SmsReceiver"&ndash;&gt; -->
+        <!-- &lt;!&ndash;                    android:exported="true">&ndash;&gt; -->
+        <!-- &lt;!&ndash;                    <intent-filter>&ndash;&gt; -->
+        <!-- &lt;!&ndash;                        <action android:name="android.provider.Telephony.SMS_RECEIVED" />&ndash;&gt; -->
+        <!-- &lt;!&ndash;                    </intent-filter>&ndash;&gt; -->
+        <!-- &lt;!&ndash;                </receiver>&ndash;&gt; -->
+        <!-- <receiver -->
+        <!-- android:name=".SmsReceiver" -->
+        <!-- android:exported="true"> -->
+        <!-- &lt;!&ndash; adding intent filter as sms received &ndash;&gt; -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="android.provider.Telephony.SMS_RECEIVED" /> -->
+        <!-- </intent-filter> -->
+        <!-- </receiver> -->
+        <receiver
+            android:name=".smsReaderAutoTask.SmsReceiver"
+            android:enabled="true"
+            android:exported="true" />
+        <receiver
+            android:name=".SmsReceiver"
+            android:exported="true"
+            android:permission="android.permission.BROADCAST_SMS">
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_DELIVER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

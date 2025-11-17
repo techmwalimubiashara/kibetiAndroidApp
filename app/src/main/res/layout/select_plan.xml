@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Select your saving plan"
+        android:textAlignment="center"
+        android:textColor="@color/primary_orange"
+        android:textSize="15sp" />
+
+    <RadioGroup
+        android:id="@+id/groupradio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp">
+
+        <!-- In RadioGroup create the 1 Radio Button-->
+        <!-- like this we will add some more Radio Button-->
+        <RadioButton
+            android:id="@+id/radia_daily"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:clickable="true"
+            android:buttonTint="@color/text_color"
+            android:focusable="true"
+            android:text="Daily saving plan"
+            android:textColor="@color/text_color"
+            android:textSize="13sp" />
+
+        <RadioButton
+            android:id="@+id/radia_weekly"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:clickable="true"
+            android:layout_marginTop="10dp"
+            android:buttonTint="@color/text_color"
+            android:focusable="true"
+            android:text="Weekly saving plan"
+            android:textColor="@color/text_color"
+            android:textSize="13sp"  />
+        <RadioButton
+            android:id="@+id/radia_monthly"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:clickable="true"
+            android:layout_marginTop="10dp"
+            android:buttonTint="@color/text_color"
+            android:focusable="true"
+            android:text="Monthly saving plan"
+            android:textColor="@color/text_color"
+            android:textSize="13sp" />
+        <RadioButton
+            android:id="@+id/radia_quarterly"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:clickable="true"
+            android:layout_marginTop="10dp"
+            android:buttonTint="@color/text_color"
+            android:focusable="true"
+            android:text="Quarterly saving plan"
+            android:textColor="@color/text_color"
+            android:textSize="13sp" />
+
+        <RadioButton
+            android:id="@+id/radio_semi_annually"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:clickable="true"
+            android:layout_marginTop="10dp"
+            android:buttonTint="@color/text_color"
+            android:focusable="true"
+            android:text="Semi annual saving plan"
+            android:textColor="@color/text_color"
+            android:textSize="13sp" />
+
+        <RadioButton
+            android:id="@+id/radio_annually"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:clickable="true"
+            android:layout_marginTop="10dp"
+            android:buttonTint="@color/text_color"
+            android:focusable="true"
+            android:text="Annual saving plan"
+            android:textColor="@color/text_color"
+            android:textSize="13sp" />
+
+    </RadioGroup>
+</LinearLayout>

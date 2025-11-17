@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="350dp"
+    android:layout_height="400dp"
+    android:background="@drawable/round_corners_white"
+    android:padding="15dp"
+    android:layout_gravity="bottom|center_horizontal">
+
+
+    <TextView
+        android:id="@+id/txtclose"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:textColor="@color/text_color"
+        android:text="X"
+        android:textStyle="bold"
+        android:layout_gravity="end"
+        android:gravity="center"
+        android:background="@drawable/cart_background"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter a 4 digits passcode"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/_12ssp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_gravity="center_horizontal"
+            />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/createPasscodeLayout"
+        android:visibility="gone"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="30dp"
+            >
+            <TextView
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:text="Passcode"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/_12ssp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="20dp"
+                />
+            <EditText
+                android:id="@+id/idCat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:hint="Passcode"
+                android:textColor="@color/primary_orange"
+                android:textColorHint="@color/lavander"
+                android:backgroundTint="@color/primary_green"
+                android:importantForAutofill="no"
+                android:textSize="@dimen/_12ssp"
+                android:inputType="number" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="15dp"
+            >
+            <TextView
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:text="Confirm Passcode"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/_12ssp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="20dp"
+                />
+
+            <EditText
+                android:id="@+id/idAmount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:hint="Confirm passcode"
+                android:importantForAutofill="no"
+                android:textColor="@color/primary_orange"
+                android:textColorHint="@color/lavander"
+                android:backgroundTint="@color/primary_green"
+                android:textSize="@dimen/_12ssp"
+                android:inputType="number" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginEnd="10dp"
+            android:gravity="center_horizontal"
+            >
+            <Button
+                android:id="@+id/idBtnDelete"
+                android:layout_width="120dp"
+                android:layout_height="35dp"
+                android:layout_margin="10dp"
+                android:text="Cancel"
+                android:textAllCaps="false"
+                android:textSize="@dimen/_9ssp"
+                android:background="@drawable/button_rectangle_line"
+                android:textColor="@color/white"
+                />
+            <Button
+                android:id="@+id/idBtnSave"
+                android:layout_width="120dp"
+                android:layout_height="35dp"
+                android:layout_margin="10dp"
+                android:text="Save"
+                android:textAllCaps="false"
+                android:textSize="@dimen/_9ssp"
+                android:background="@drawable/button_rectangle_line"
+                android:textColor="@color/white"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/changePasscodeLayout"
+        android:visibility="gone"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="30dp"
+            >
+            <TextView
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:text="Old Passcode"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/_12ssp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="20dp"
+                />
+            <EditText
+                android:id="@+id/idOldPasscode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:hint="Old Passcode"
+                android:textColor="@color/primary_orange"
+                android:textColorHint="@color/lavander"
+                android:backgroundTint="@color/primary_green"
+                android:importantForAutofill="no"
+                android:textSize="@dimen/_12ssp"
+                android:inputType="number" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            >
+            <TextView
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:text="New Passcode"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/_12ssp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="20dp"
+                />
+            <EditText
+                android:id="@+id/idNewPass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:hint="New Passcode"
+                android:textColor="@color/primary_orange"
+                android:textColorHint="@color/lavander"
+                android:backgroundTint="@color/primary_green"
+                android:importantForAutofill="no"
+                android:textSize="@dimen/_12ssp"
+                android:inputType="number" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            >
+            <TextView
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:text="Confirm Passcode"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/_12ssp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="20dp"
+                />
+
+            <EditText
+                android:id="@+id/idNewPass2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:hint="Confirm passcode"
+                android:importantForAutofill="no"
+                android:textColor="@color/primary_orange"
+                android:textColorHint="@color/lavander"
+                android:backgroundTint="@color/primary_green"
+                android:textSize="@dimen/_12ssp"
+                android:inputType="number" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="10dp"
+            android:gravity="center_horizontal"
+            >
+            <Button
+                android:id="@+id/idBtnCancel"
+                android:layout_width="120dp"
+                android:layout_height="35dp"
+                android:layout_margin="10dp"
+                android:text="Cancel"
+                android:textAllCaps="false"
+                android:textSize="@dimen/_9ssp"
+                android:background="@drawable/button_rectangle_line"
+                android:textColor="@color/white"
+                />
+            <Button
+                android:id="@+id/idBtnSaveChanges"
+                android:layout_width="120dp"
+                android:layout_height="35dp"
+                android:layout_margin="10dp"
+                android:text="Save"
+                android:textAllCaps="false"
+                android:textSize="@dimen/_9ssp"
+                android:background="@drawable/button_rectangle_line"
+                android:textColor="@color/white"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/deletePasscodeLayout"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="30dp"
+            >
+            <TextView
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:text="Passcode"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/_12ssp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="20dp"
+                />
+            <EditText
+                android:id="@+id/idPasscodeRemove"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:hint="Passcode"
+                android:textColor="@color/primary_orange"
+                android:textColorHint="@color/lavander"
+                android:backgroundTint="@color/primary_green"
+                android:importantForAutofill="no"
+                android:textSize="@dimen/_12ssp"
+                android:inputType="number" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginEnd="10dp"
+            android:gravity="center_horizontal"
+            >
+            <Button
+                android:id="@+id/idBtndismiss"
+                android:layout_width="120dp"
+                android:layout_height="35dp"
+                android:layout_margin="10dp"
+                android:text="Cancel"
+                android:textAllCaps="false"
+                android:textSize="@dimen/_9ssp"
+                android:background="@drawable/button_rectangle_line"
+                android:textColor="@color/white"
+                />
+            <Button
+                android:id="@+id/idBtnContinue"
+                android:layout_width="120dp"
+                android:layout_height="35dp"
+                android:layout_margin="10dp"
+                android:text="Save"
+                android:textAllCaps="false"
+                android:textSize="@dimen/_9ssp"
+                android:background="@drawable/button_rectangle_line"
+                android:textColor="@color/white"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

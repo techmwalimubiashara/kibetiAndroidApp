@@ -1,0 +1,922 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fitsSystemWindows="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primary_orange"
+        android:padding="16dp">
+
+        <ImageButton
+            android:id="@+id/backButton"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@color/primary_orange"
+            android:contentDescription="Back button"
+            android:src="@drawable/ic_close"
+            android:tint="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/tvToolHeader"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvToolHeader"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="17dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/backButton"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/layoutStep1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+
+            >
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.9"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView
+                        style="@style/Base.CardView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_row="5"
+                        android:layout_column="0"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:backgroundTint="@color/lavander_bg"
+                        android:padding="0dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="0dp"
+                                android:layout_height="120dp"
+                                android:layout_weight="0.2">
+
+                                <LinearLayout
+                                    android:id="@+id/layoutHeader1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:orientation="vertical"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                    <ImageView
+                                        android:id="@+id/imHead1"
+                                        android:layout_width="50dp"
+                                        android:layout_height="60dp"
+                                        android:layout_gravity="center_horizontal"
+                                        android:src="@drawable/ic_growing_up" />
+
+                                    <TextView
+                                        android:id="@+id/tvGoal1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:text="Step 1 of 4"
+                                        android:textColor="@color/text_color"
+                                        android:textSize="@dimen/_14ssp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/tvGoalDes1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:layout_marginTop="5dp"
+                                        android:text=" "
+                                        android:textColor="@color/text_color"
+                                        android:textSize="@dimen/_11ssp" />
+
+                                </LinearLayout>
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.5" />
+                    <TextView
+                        android:id="@+id/tvQuiz1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="30dp"
+                        android:layout_marginTop="20dp"
+                        android:text="My age bracket"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/_15ssp"
+                        android:textStyle="bold"
+                        />
+
+
+                    <RadioGroup
+                        android:id="@+id/groupradio"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="50dp"
+                        >
+
+
+                        <RadioButton
+                            android:id="@+id/radio_18_22"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:buttonTint="@color/text_color"
+                            android:text="18 - 22 years"
+                            android:textColor="@color/text_color"
+                            android:textSize="@dimen/_13ssp" />
+
+                        <RadioButton
+                            android:id="@+id/radio_23_29"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:buttonTint="@color/text_color"
+                            android:text="23 - 29 years"
+                            android:textColor="@color/text_color"
+                            android:textSize="@dimen/_13ssp" />
+
+                        <RadioButton
+                            android:id="@+id/radio_30_34"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:buttonTint="@color/text_color"
+                            android:text="30 - 34 years"
+                            android:textColor="@color/text_color"
+                            android:textSize="@dimen/_13ssp" />
+
+                        <RadioButton
+                            android:id="@+id/radio_35_39"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:buttonTint="@color/text_color"
+                            android:text="35 - 39 years"
+                            android:textColor="@color/text_color"
+                            android:textSize="@dimen/_13ssp" />
+
+                        <RadioButton
+                            android:id="@+id/radio_40_44"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:buttonTint="@color/text_color"
+                            android:text="40 - 44 years"
+                            android:textColor="@color/text_color"
+                            android:textSize="@dimen/_13ssp" />
+
+                        <RadioButton
+                            android:id="@+id/radio_45_49"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:buttonTint="@color/text_color"
+                            android:text="45 - 49 years"
+                            android:textColor="@color/text_color"
+                            android:textSize="@dimen/_13ssp" />
+
+                        <RadioButton
+                            android:id="@+id/radio_50_54"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:buttonTint="@color/text_color"
+                            android:text="50 - 54 years"
+                            android:textColor="@color/text_color"
+                            android:textSize="@dimen/_13ssp" />
+
+                        <RadioButton
+                            android:id="@+id/radio_55_59"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:buttonTint="@color/text_color"
+                            android:text="55 - 59 years"
+                            android:textColor="@color/text_color"
+                            android:textSize="@dimen/_13ssp" />
+
+                        <RadioButton
+                            android:id="@+id/radio_60_64"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:buttonTint="@color/text_color"
+                            android:text="60 - 65 years"
+                            android:textColor="@color/text_color"
+                            android:textSize="@dimen/_13ssp" />
+
+                        <RadioButton
+                            android:id="@+id/radio_over65"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:buttonTint="@color/text_color"
+                            android:text="over 65 years"
+                            android:textColor="@color/text_color"
+                            android:textSize="@dimen/_13ssp" />
+
+                    </RadioGroup>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.5" />
+
+
+                </LinearLayout>
+            </ScrollView>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="bottom"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btnNextStep1"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/button_greyed_out"
+                    android:enabled="false"
+                    android:onClick="startLayoutStep2"
+                    android:padding="3dp"
+                    android:text="Next"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12ssp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutStep2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+           >
+
+            <androidx.cardview.widget.CardView
+                style="@style/Base.CardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_row="5"
+                android:layout_column="0"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:backgroundTint="@color/lavander_bg"
+                android:padding="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="0dp"
+                        android:layout_height="120dp"
+                        android:layout_weight="0.2">
+
+                        <LinearLayout
+                            android:id="@+id/layoutHeader2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:orientation="vertical"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <ImageView
+                                android:id="@+id/imHead2"
+                                android:layout_width="50dp"
+                                android:layout_height="60dp"
+                                android:layout_gravity="center_horizontal"
+                                android:src="@drawable/ic_growing_up" />
+
+                            <TextView
+                                android:id="@+id/tvGoal2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:text="Step 2 of 4:"
+                                android:textColor="@color/text_color"
+                                android:textSize="@dimen/_14ssp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tvGoalDes2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="5dp"
+                                android:text=" "
+                                android:textColor="@color/text_color"
+                                android:textSize="@dimen/_11ssp" />
+
+                        </LinearLayout>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.5" />
+
+            <TextView
+                android:id="@+id/tvQuiz2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_margin="20dp"
+                android:text="I am ready to try an investment that gives a good return even if the risk is high."
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/_15ssp"
+                android:textStyle="bold"
+                />
+
+
+            <RadioGroup
+                android:id="@+id/groupradioRisk"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="10dp">
+
+
+                <RadioButton
+                    android:id="@+id/radio_Never"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:buttonTint="@color/text_color"
+                    android:text="Never"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/_13ssp" />
+
+                <RadioButton
+                    android:id="@+id/radio_Rarely"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:buttonTint="@color/text_color"
+                    android:text="Rarely"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/_13ssp" />
+
+                <RadioButton
+                    android:id="@+id/radio_Sometimes"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:buttonTint="@color/text_color"
+                    android:text="Sometimes"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/_12ssp" />
+
+                <RadioButton
+                    android:id="@+id/radio_Often"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:buttonTint="@color/text_color"
+                    android:text="Often"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/_12ssp" />
+
+                <RadioButton
+                    android:id="@+id/radio_Always"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:buttonTint="@color/text_color"
+                    android:text="Always"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/_12ssp" />
+
+
+            </RadioGroup>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.5" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_gravity="bottom|center"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="bottom"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btnNextStep2"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/button_greyed_out"
+                    android:enabled="false"
+                    android:onClick="startLayoutStep3"
+                    android:padding="3dp"
+                    android:text="Next"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12ssp" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.1" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center_horizontal"
+                    android:onClick="startLayoutStep1"
+                    android:padding="3dp"
+                    android:text="@string/str_back"
+                    android:textAllCaps="false"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/_14ssp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutStep3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <androidx.cardview.widget.CardView
+                style="@style/Base.CardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_row="5"
+                android:layout_column="0"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:backgroundTint="@color/lavander_bg"
+                android:padding="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="0dp"
+                        android:layout_height="120dp"
+                        android:layout_weight="0.2">
+
+                        <LinearLayout
+                            android:id="@+id/layoutHeader3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:orientation="vertical"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <ImageView
+                                android:id="@+id/imHead3"
+                                android:layout_width="50dp"
+                                android:layout_height="60dp"
+                                android:layout_gravity="center_horizontal"
+                                android:src="@drawable/ic_growing_up" />
+
+                            <TextView
+                                android:id="@+id/tvGoal3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:text="Step 3 of 4:"
+                                android:textColor="@color/text_color"
+                                android:textSize="@dimen/_14ssp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tvGoalDes3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="5dp"
+                                android:text=" "
+                                android:textColor="@color/text_color"
+                                android:textSize="@dimen/_11ssp" />
+
+                        </LinearLayout>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.5" />
+
+            <TextView
+                android:id="@+id/tvQuiz3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:text="How would you feel if your
+                 investments lost 20% of their value in a short period of time?"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/_15ssp"
+                android:textStyle="bold"
+                />
+
+            <RadioGroup
+                android:id="@+id/groupradioTorelance"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp">
+
+                <RadioButton
+                    android:id="@+id/radio_never_1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:buttonTint="@color/text_color"
+                    android:text="Very uncomfortable – I would sell all immediately to avoid further losses"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/_13ssp" />
+
+                <RadioButton
+                    android:id="@+id/radio_rarely"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:buttonTint="@color/text_color"
+                    android:text="Uncomfortable – I would sell some to reduce risk."
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/_13ssp" />
+
+
+                <RadioButton
+                    android:id="@+id/radio_sometimes"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:buttonTint="@color/text_color"
+                    android:text="Neutral – I would hold, but jittery it the market will recover"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/_12ssp" />
+
+                <RadioButton
+                    android:id="@+id/radio_often"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:buttonTint="@color/text_color"
+                    android:text="Comfortable – I would hold, trusting that the market will recover over time."
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/_13ssp" />
+
+
+                <RadioButton
+                    android:id="@+id/radio_always"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:buttonTint="@color/text_color"
+                    android:text="Very comfortable – I would take advantage of the drop buy more."
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/_13ssp" />
+
+
+
+            </RadioGroup>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.5" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_gravity="bottom|center"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="bottom"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btnNextStep3"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/button_greyed_out"
+                    android:enabled="false"
+                    android:onClick="startLayoutStep4"
+                    android:padding="3dp"
+                    android:text="Next"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12ssp" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.1" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center_horizontal"
+                    android:onClick="startLayoutStep2"
+                    android:padding="3dp"
+                    android:text="@string/str_back"
+                    android:textAllCaps="false"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/_14ssp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutStep4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <androidx.cardview.widget.CardView
+                style="@style/Base.CardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_row="5"
+                android:layout_column="0"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:backgroundTint="@color/lavander_bg"
+                android:padding="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="0dp"
+                        android:layout_height="120dp"
+                        android:layout_weight="0.2">
+
+                        <LinearLayout
+                            android:id="@+id/layoutHeader4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:orientation="vertical"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <ImageView
+                                android:id="@+id/imHead4"
+                                android:layout_width="50dp"
+                                android:layout_height="60dp"
+                                android:layout_gravity="center_horizontal"
+                                android:src="@drawable/ic_growing_up" />
+
+                            <TextView
+                                android:id="@+id/tvGoal4"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:text="Step 4 of 4:"
+                                android:textColor="@color/text_color"
+                                android:textSize="@dimen/_14ssp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tvGoalDes4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="5dp"
+                                android:text=" "
+                                android:textColor="@color/text_color"
+                                android:textSize="@dimen/_11ssp" />
+
+                        </LinearLayout>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.5" />
+            <TextView
+                android:id="@+id/tvQuiz4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="50dp"
+                android:text="  My experience as an investor"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/_15ssp"
+                android:textStyle="bold"
+                />
+
+            <RadioGroup
+                android:id="@+id/groupradioExperience"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="0.5">
+
+
+                <RadioButton
+                    android:id="@+id/radio_never_invested"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:buttonTint="@color/text_color"
+                    android:text="Never invested"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/_13ssp" />
+
+                <RadioButton
+                    android:id="@+id/radio_beginner"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:buttonTint="@color/text_color"
+                    android:text="Beginner"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/_13ssp" />
+
+                <RadioButton
+                    android:id="@+id/radio_intermediate"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:buttonTint="@color/text_color"
+                    android:text="Intermediate"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/_12ssp" />
+
+                <RadioButton
+                    android:id="@+id/radio_advanced"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:buttonTint="@color/text_color"
+                    android:text="Advanced"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/_12ssp" />
+
+                <RadioButton
+                    android:id="@+id/radio_expert"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:buttonTint="@color/text_color"
+                    android:text="Expert"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/_12ssp" />
+
+
+            </RadioGroup>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.5" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_gravity="bottom|center"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="bottom"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btnNextStep4"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/button_greyed_out"
+                    android:enabled="false"
+                    android:onClick="getInvestmentView"
+                    android:padding="3dp"
+                    android:text="Get my recommended investments"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_14ssp" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.1" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center_horizontal"
+                    android:onClick="startLayoutStep3"
+                    android:padding="3dp"
+                    android:text="@string/str_back"
+                    android:textAllCaps="false"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/_14ssp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

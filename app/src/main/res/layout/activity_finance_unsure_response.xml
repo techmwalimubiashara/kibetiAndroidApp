@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/_20sdp"
+    android:background="@color/background"
+    tools:context=".landingPageTask.ui.FinanceUnsureResponseActivity">
+
+    <ImageView
+        android:id="@+id/arrow"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:src="@drawable/ic_back_arrow"
+        android:background="@color/background"
+        android:tint="@color/primary_orange"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <!-- Image -->
+    <ImageView
+        android:id="@+id/image_response"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/plant2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="100dp"
+        android:contentDescription="Response image" />
+
+
+    <!-- Heading Text -->
+    <TextView
+        android:id="@+id/tv_heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="50sp"
+        android:text="😐"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/image_response"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:gravity="center"
+        android:layout_marginTop="16dp"/>
+
+
+    <TextView
+        android:id="@+id/tv_heading2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:text="Unsure."
+        android:textStyle="bold"
+        android:textColor="@color/text_color"
+        app:layout_constraintTop_toBottomOf="@id/tv_heading"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:gravity="center"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Body Text -->
+    <TextView
+        android:id="@+id/tv_body"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="Set your top three goals."
+        android:textColor="@color/grey"
+        android:gravity="center"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_heading2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+    <TextView
+        android:id="@+id/tv_body2"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="Then, track them for success."
+        android:textColor="@color/grey"
+        android:gravity="center"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_body"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <Button
+        android:id="@+id/btn_lets_go"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="Let's Go!"
+        android:background="@drawable/button_rectangle_line"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

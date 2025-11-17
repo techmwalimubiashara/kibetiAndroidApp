@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="601dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/cart_background"
+        app:cardCornerRadius="@dimen/_15sdp"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="8dp">
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginBottom="20dp"
+                android:text="Edit Budget"
+                android:textColor="@color/text_black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ScrollView
+                android:id="@+id/scrollLayout"
+                android:layout_width="match_parent"
+                android:layout_height="500dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+                app:layout_constraintVertical_weight="0.8">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tvItem1"
+                            android:layout_width="180dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="🐖 Savings"
+                            android:textColor="@color/text_black"
+                            android:textSize="@dimen/_12ssp" />
+
+                        <EditText
+                            android:id="@+id/edItem1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:backgroundTint="@color/primary_green"
+                            android:hint="Amount"
+                            android:importantForAutofill="no"
+                            android:inputType="number"
+                            android:textColor="@color/primary_orange"
+                            android:textColorHint="@color/lavander"
+                            android:textSize="@dimen/_12ssp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tvItem2"
+                            android:layout_width="180dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="🏦 Investments"
+                            android:textColor="@color/text_black"
+                            android:textSize="@dimen/_12ssp" />
+
+                        <EditText
+                            android:id="@+id/edItem2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:backgroundTint="@color/primary_green"
+                            android:hint="Amount"
+                            android:importantForAutofill="no"
+                            android:inputType="number"
+                            android:textColor="@color/primary_orange"
+                            android:textColorHint="@color/lavander"
+                            android:textSize="@dimen/_12ssp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tvItem3"
+                            android:layout_width="180dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="📅 Day to Day"
+                            android:textColor="@color/text_black"
+                            android:textSize="@dimen/_12ssp" />
+
+                        <EditText
+                            android:id="@+id/edItem3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:backgroundTint="@color/primary_green"
+
+                            android:hint="Amount"
+                            android:importantForAutofill="no"
+                            android:inputType="number"
+                            android:textColor="@color/primary_orange"
+                            android:textColorHint="@color/lavander"
+                            android:textSize="@dimen/_12ssp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tvItem4"
+                            android:layout_width="180dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="🚌 Mobility"
+                            android:textColor="@color/text_black"
+                            android:textSize="@dimen/_12ssp" />
+
+                        <EditText
+                            android:id="@+id/edItem4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:backgroundTint="@color/primary_green"
+
+                            android:hint="Amount"
+                            android:importantForAutofill="no"
+                            android:inputType="number"
+                            android:textColor="@color/primary_orange"
+                            android:textColorHint="@color/lavander"
+                            android:textSize="@dimen/_12ssp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="180dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="🎁 Faith and Giving"
+                            android:textColor="@color/text_black"
+                            android:textSize="@dimen/_12ssp" />
+
+                        <EditText
+                            android:id="@+id/edItem5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:backgroundTint="@color/primary_green"
+
+                            android:hint="Amount"
+                            android:importantForAutofill="no"
+                            android:inputType="number"
+                            android:textColor="@color/primary_orange"
+                            android:textColorHint="@color/lavander"
+                            android:textSize="@dimen/_12ssp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="180dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="🏋🏻‍♂️ Self"
+                            android:textColor="@color/text_black"
+                            android:textSize="@dimen/_12ssp" />
+
+                        <EditText
+                            android:id="@+id/edItem6"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:backgroundTint="@color/primary_green"
+
+                            android:hint="Amount"
+                            android:importantForAutofill="no"
+                            android:inputType="number"
+                            android:textColor="@color/primary_orange"
+                            android:textColorHint="@color/lavander"
+                            android:textSize="@dimen/_12ssp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="180dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="🏦Loan Servicing"
+                            android:textColor="@color/text_black"
+                            android:textSize="@dimen/_12ssp" />
+
+                        <EditText
+                            android:id="@+id/edItem7"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:backgroundTint="@color/primary_green"
+                            android:hint="Amount"
+                            android:importantForAutofill="no"
+                            android:inputType="number"
+                            android:textColor="@color/primary_orange"
+                            android:textColorHint="@color/lavander"
+                            android:textSize="@dimen/_12ssp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="180dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="🛡️ Protection"
+                            android:textColor="@color/text_black"
+                            android:textSize="@dimen/_12ssp" />
+
+                        <EditText
+                            android:id="@+id/edItem8"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:backgroundTint="@color/primary_green"
+                            android:hint="Amount"
+                            android:importantForAutofill="no"
+                            android:inputType="number"
+                            android:textColor="@color/primary_orange"
+                            android:textColorHint="@color/lavander"
+                            android:textSize="@dimen/_12ssp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="180dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="👴👨‍👩‍👦👵 Dependents"
+                            android:textColor="@color/text_black"
+                            android:textSize="@dimen/_12ssp" />
+
+                        <EditText
+                            android:id="@+id/edItem9"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:backgroundTint="@color/primary_green"
+                            android:hint="Amount"
+                            android:importantForAutofill="no"
+                            android:inputType="number"
+                            android:textColor="@color/primary_orange"
+                            android:textColorHint="@color/lavander"
+                            android:textSize="@dimen/_12ssp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="180dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="💸 Other Outflows"
+                            android:textColor="@color/text_black"
+                            android:textSize="@dimen/_12ssp" />
+
+                        <EditText
+                            android:id="@+id/edItem10"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:backgroundTint="@color/primary_green"
+                            android:hint="Amount"
+                            android:importantForAutofill="no"
+                            android:inputType="number"
+                            android:textColor="@color/primary_orange"
+                            android:textColorHint="@color/lavander"
+                            android:textSize="@dimen/_12ssp" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </ScrollView>
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/scrollLayout">
+
+
+                <Button
+                    android:id="@+id/idBtnSave"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/button_rectangle_line"
+                    android:text="Save Changes"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_14ssp" />
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
