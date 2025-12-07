@@ -60,6 +60,7 @@ public class ReferFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view;
 
+//        view = inflater.inflate(R.layout.activity_invite_friend, container, false);
         view = inflater.inflate(R.layout.fragment_refer, container, false);
 
         // Inflate the layout for this fragment

@@ -216,7 +216,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 //
 //
 //        if(ActivityCompat.checkSelfPermission(this,PERMISSION_READ_SMS)==PackageManager.PERMISSION_GRANTED){
-////            Toast.makeText(this,"Permission Granted",Toast.LENGTH_LONG).show();
+//            Toast.makeText(this,"Permission Granted",Toast.LENGTH_LONG).show();
 //            Log.e("TAG", "Is sms read 2 ? " + smsIsRead);
 //            if(!smsIsRead){
 //                if(readSms()){
@@ -655,13 +655,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         appUpdateManager = AppUpdateManagerFactory.create(this);
 
 // Returns an intent object that you use to check for an update.
-        Task<AppUpdateInfo> appUpdateInfoTask = appUpdateManager.getAppUpdateInfo();
+
+Task<AppUpdateInfo> appUpdateInfoTask = appUpdateManager.getAppUpdateInfo();
 
 // Checks that the platform will allow the specified type of update.
         appUpdateInfoTask.addOnSuccessListener(appUpdateInfo -> {
             if (appUpdateInfo.updateAvailability() == UpdateAvailability.UPDATE_AVAILABLE
-                    // This example applies an immediate update. To apply a flexible update
-                    // instead, pass in AppUpdateType.FLEXIBLE
                     && appUpdateInfo.isUpdateTypeAllowed(AppUpdateType.FLEXIBLE)) {
                 try {
                     appUpdateManager.startUpdateFlowForResult(
@@ -699,7 +698,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         if (state.installStatus() == InstallStatus.DOWNLOADED) {
             // After the update is downloaded, show a notification
             // and request user confirmation to restart the app.
-            popupSnackbarForCompleteUpdate();
+//            popupSnackbarForCompleteUpdate();
+
+            appUpdateManager.completeUpdate(); // auto restart
         }
 
     };

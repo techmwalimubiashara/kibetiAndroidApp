@@ -12,9 +12,21 @@ import com.mb.kibeti.smsReaderAutoTask.responses.ConfirmAllocatedTransactionsRes
 import com.mb.kibeti.smsReaderAutoTask.responses.DbSearchApiResponse
 import com.mb.kibeti.smsReaderAutoTask.responses.GetAutoAllocatedTransactionsApiResponse
 import com.mb.kibeti.smsReaderAutoTask.responses.UpdateTransactionApiResponse
+import com.mb.kibeti.coupon.requests.FetchReferralCodeRequestBody
+import com.mb.kibeti.coupon.requests.GenerateReferralCodeRequestBody
+import com.mb.kibeti.coupon.requests.MyReferralsRequestBody
+import com.mb.kibeti.coupon.requests.MyWalletRequestBody
+import com.mb.kibeti.coupon.requests.SampleLoginRequest
+import com.mb.kibeti.coupon.responses.FetchRefferalCodeResponse
+import com.mb.kibeti.coupon.responses.GetRefferalCodeResponse
+import com.mb.kibeti.coupon.responses.MyReferralsApiResponse
+import com.mb.kibeti.coupon.responses.MyWalletApiResponse
+import com.mb.kibeti.coupon.responses.SampleLoginApiResponse
 import retrofit2.Response
 import retrofit2.http.Body
+import retrofit2.http.GET
 import retrofit2.http.POST
+import retrofit2.http.Query
 
 interface ApiService {
     @POST("app_developer/outflow_budget.php")
@@ -34,4 +46,19 @@ interface ApiService {
 
     @POST("app_developer/mpesa_search.php")
     suspend fun confirmAllocatedTransactions(@Body confirmAllocatedTransactionsRequestBody: ConfirmAllocatedTransactionsRequestBody):Response<ConfirmAllocatedTransactionsResponse>
+
+    @POST("generate-referral-code")
+    suspend fun generateRefferalCode(@Body generateReferralCodeRequestBody: GenerateReferralCodeRequestBody): Response <GetRefferalCodeResponse>
+
+    @POST("login")
+    suspend fun sampleLogin(@Body sampleLoginRequest: SampleLoginRequest): Response<SampleLoginApiResponse>
+
+    @GET("my-referral-code")
+    suspend fun fetchRefferalCode(@Query("email") email: String): Response<FetchRefferalCodeResponse>
+
+    @GET("referrals")
+    suspend fun getMyReferrals(@Query("email") email: String) : Response<MyReferralsApiResponse>
+
+    @GET("wallet")
+    suspend fun getMyWallet(@Body myWalletRequestBody: MyWalletRequestBody) : Response<MyWalletApiResponse>
 }

@@ -1,0 +1,243 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:padding="5dp"
+    tools:context=".coupon.ui.InviteFriendActivity">
+
+
+
+        <!-- Logo -->
+        <ImageView
+            android:id="@+id/logoImage"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="24dp"
+            android:src="@drawable/kibeti_image"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:visibility="gone"/>
+
+        <!-- Description -->
+        <TextView
+            android:id="@+id/descText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:text="Did you know?\nYou can earn by inviting a friend to Kibeti"
+            android:textAlignment="center"
+            android:textColor="@color/text_color"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/logoImage"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- How it works box -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/howItWorksBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:background="@color/background_card"
+            android:layout_marginHorizontal="8dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="6dp"
+            app:cardBackgroundColor="@color/background_card"
+            app:layout_constraintTop_toBottomOf="@id/descText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:padding="20dp">
+
+                <!-- Title -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="How it works"
+                    android:textColor="@color/text_color"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="12dp" />
+
+                <!-- Reusable bullets -->
+                <!-- Repeat for each bullet -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="16dp">
+                    <View
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_marginEnd="8dp"
+                        android:background="@drawable/green_bullet" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Click the generate code button"
+                        android:textColor="@color/text_color"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <!-- Repeat for each bullet (reuse code block above) -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="16dp">
+                    <View
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_marginEnd="8dp"
+                        android:background="@drawable/green_bullet" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_color"
+                        android:text="Kibeti generates a unique code for you"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="16dp">
+                    <View
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_marginEnd="8dp"
+                        android:background="@drawable/green_bullet" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_color"
+                        android:text="Click the invite button"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="16dp">
+                    <View
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_marginEnd="8dp"
+                        android:background="@drawable/green_bullet" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_color"
+                        android:text="Share your code with your friends"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="16dp">
+                    <View
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_marginEnd="8dp"
+                        android:background="@drawable/green_bullet" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Your friends download and pay the monthly subscriptions"
+                        android:textSize="16sp"
+                        android:textColor="@color/grey"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <!-- Final line -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🎉🥳 hooray!!"
+                    android:textColor="@color/text_color"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Generate Code Button -->
+       <androidx.appcompat.widget.AppCompatButton
+           android:id="@+id/generateCodeBTN"
+           android:layout_width="0dp"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="24dp"
+           android:background="@drawable/button_gray"
+           android:padding="12dp"
+           android:textStyle="bold"
+           android:visibility="gone"
+           android:text="Generate Code"
+           android:textAllCaps="false"
+           android:textColor="@color/green"
+           android:textSize="16sp"
+           app:layout_constraintBottom_toTopOf="@id/inviteAfriendBTN"
+           app:layout_constraintTop_toBottomOf="@id/howItWorksBox"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintEnd_toEndOf="parent"/>
+
+        <!-- Invite a Friend Button -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/inviteAfriendBTN"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/button_rectangle_line"
+            android:padding="12dp"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:layout_marginRight="@dimen/_15sdp"
+            android:textStyle="bold"
+            android:text="Invite a friend"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="19sp"
+            app:layout_constraintTop_toBottomOf="@id/generateCodeBTN"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+
+<!--        <TextView-->
+<!--            android:id="@+id/mywallet"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="16dp"-->
+<!--            android:text="My Wallet"-->
+<!--            android:textAlignment="center"-->
+<!--            android:textColor="@color/green"-->
+<!--            android:textSize="@dimen/_20sdp"-->
+<!--            android:clickable="true"-->
+<!--            android:textStyle="bold"-->
+<!--            app:layout_constraintTop_toBottomOf="@id/inviteAfriendBTN"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent" />-->
+
+    </androidx.constraintlayout.widget.ConstraintLayout>

@@ -10,6 +10,8 @@ import android.os.AsyncTask;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
+import android.transition.AutoTransition;
+import android.transition.TransitionManager;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -19,6 +21,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.PopupWindow;
@@ -60,7 +63,7 @@ import okhttp3.Response;
 
 public class UpdateMpesaPop {
 
-    PipeLines util =  new PipeLines();
+    PipeLines util = new PipeLines();
     String ADD_ACTUAL_EXPENSES_URL = util.ADD_ACTUAL_EXPENSES_URL;
     String GET_ACTUAL_EXPENSE_LIST_URL = util.GET_ACTUAL_EXPENSE_LIST_URL;
     TextView txtclose;
@@ -72,7 +75,7 @@ public class UpdateMpesaPop {
     Dialog showDescriptionPopUp;
     BottomSheetDialog bottomSheetDialog;
     Context c;
-    Boolean hasNotAccepted=false;
+    Boolean hasNotAccepted = false;
     ArrayList<String> categories = new ArrayList<String>();
     DecimalFormat formatter;
     String email = "";
@@ -88,6 +91,7 @@ public class UpdateMpesaPop {
     String expense_id = "0";
     String expense_line = "none";
     NumberFormatOnTyping numberFormatOnTyping;
+
     private List<String> itemList = new ArrayList<>();
     private PopupSearchAdapter otherLinesAdapter;
 
@@ -106,7 +110,6 @@ public class UpdateMpesaPop {
         basicCat.add("Shelter/Rent");
 
         getBudgetedLine();
-
 
         onCreatePop();
     }
@@ -131,14 +134,14 @@ public class UpdateMpesaPop {
         data = Arrays.asList(
                 "Shopping", "Food and Beverage", "Entertainment", "Transport and Travel",
                 "Bills, Airtime and Services", "Education", "County and Government",
-                "Loans", "Family and Friends", "Contributions","Shelter", "View More"
+                "Loans", "Family and Friends", "Contributions", "Shelter", "View More"
         );
 
         OutflowBudgetPopupAdapter adapter = new OutflowBudgetPopupAdapter(data, text -> {
 //            Toast.makeText(c, "Clicked: " + text, Toast.LENGTH_SHORT).show();
-            if(!text.equals("View More")) {
+            if (!text.equals("View More")) {
                 etExpenseLine.setText(text);
-            }else{
+            } else {
                 showOtherLinesPopup();
             }
 
@@ -190,6 +193,7 @@ public class UpdateMpesaPop {
             bottomSheetDialog.show();
         }
     }
+
     private void onCreatePop() {
 
         myDialog = new Dialog(c);
@@ -206,6 +210,7 @@ public class UpdateMpesaPop {
         edAmount = (EditText) myDialog.findViewById(R.id.idAmount);
         freq = (Spinner) myDialog.findViewById(R.id.idLine);
         checkBox = (CheckBox) myDialog.findViewById(R.id.checkBox);
+
 
         myAdapter = new AllocationSpinnerAdapter(c, dataClassArrayList);
     }
@@ -328,7 +333,6 @@ public class UpdateMpesaPop {
                 if (!TextUtils.isEmpty(income_frequency) && !TextUtils.isEmpty(income_amount) && !income_frequency.equals("select line")) {
 
 
-
                     String[] sp = income_frequency.split("-");
 
                     String id = expense_id;
@@ -343,18 +347,18 @@ public class UpdateMpesaPop {
                         setTransCode(mpesa_trans);
                         setAmount(income_amount);
 
-                        if(hasNotAccepted){
+                        if (hasNotAccepted) {
 
                             addDataToDatabase(income_amount, expense_id, expense_line, strDate, mpesa_trans, email);
 
-                        }else{
+                        } else {
                             showLineNotBudgeted(line);
 
                         }
 
 
                     } else {
-                    addDataToDatabase(income_amount, expense_id, expense_line, strDate, mpesa_trans, email);
+                        addDataToDatabase(income_amount, expense_id, expense_line, strDate, mpesa_trans, email);
                     }
 
 
@@ -473,7 +477,7 @@ public class UpdateMpesaPop {
 //        txtShowMessage.setText(line + " has not been budgeted for, would you like to budget now before allocating?");
         txtShowMessage.setText("Budgeting for this item takes less than a minute — and it can boost your chances of success by more than 50%!\n\n " +
                 "This is done once in a lifetime.");
-        tvHeader.setText("Why budget?" );
+        tvHeader.setText("Why budget?");
         tvHeader.setTextSize(15);
 
         cancelBtn.setVisibility(View.VISIBLE);
@@ -488,7 +492,7 @@ public class UpdateMpesaPop {
                 hasNotAccepted = true;
                 showBudgetLinePopup(line);
 
-;
+                ;
 
             }
         });
@@ -503,8 +507,6 @@ public class UpdateMpesaPop {
         });
 
 
-
-
         showDescriptionPopUp.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         showDescriptionPopUp.show();
 
@@ -513,7 +515,7 @@ public class UpdateMpesaPop {
     private void showBudgetLinePopup(String line) {
         myDialogBudget = new Dialog(c);
 
-        TextView txtclose, tvHeader,tvAmount;
+        TextView txtclose, tvHeader, tvAmount;
         Button btnFollow, submitBtn, deleteBtn;
         EditText edLine, edAmount;
         LinearLayout layoutCat;
@@ -879,11 +881,12 @@ public class UpdateMpesaPop {
 //
 //
 //                        }
-////                        if (l > 0) {
-////                            linearLayout.setVisibility(View.GONE);
-////                        } else {
-////                            linearLayout.setVisibility(View.VISIBLE);
-////                        }
+
+    /// /                        if (l > 0) {
+    /// /                            linearLayout.setVisibility(View.GONE);
+    /// /                        } else {
+    /// /                            linearLayout.setVisibility(View.VISIBLE);
+    /// /                        }
 //                    }
 //                    myAdapter.notifyDataSetChanged();
 //
@@ -931,19 +934,27 @@ public class UpdateMpesaPop {
             dataClass = new DataClass(0 + "", value, value, "0", "-", "cat");
             dataClassArrayList.add(dataClass);
 
-//            Log.e("TAG Other lines", "Adding line " + value);
         }
 
-//        Log.e("TAG", "Others categories added ");
     }
 
 
     private void showOtherLinesPopup() {
-//        View popupView = LayoutInflater.from(c).inflate(R.layout.popup_search, null);
-//        PopupWindow popupWindow = new PopupWindow(popupView, 800, 600, true);
-//        popupWindow.showAtLocation(popupView, Gravity.CENTER, 0, 0);
 
-        loadItems();
+//        loadItems();
+
+        ImageButton arrow_button, arrow_button1, arrow_button2, arrow_button3, arrow_button4, arrow_button5, arrow_button6, arrow_button7, arrow_button8;
+        LinearLayout hidden_view, hidden_view1, hidden_view2, hidden_view3, hidden_view4, hidden_view5, hidden_view6, hidden_view7, hidden_view8;
+        CardView cardView, cardView1, cardView2, cardView3, cardView4, cardView5, cardView6, cardView7, cardView8;
+
+        TextView tvLine1, tvLine2, tvLine3, tvLine4, tvLine5, tvLine6, tvLine7, tvLine8, tvLine9, tvLine10;
+        TextView tvLine11, tvLine12, tvLine13, tvLine14, tvLine15, tvLine16, tvLine17, tvLine18, tvLine19, tvLine20;
+        TextView tvLine21, tvLine22, tvLine23, tvLine24, tvLine25, tvLine26, tvLine27, tvLine28, tvLine29, tvLine30;
+        TextView tvLine31, tvLine32, tvLine33, tvLine34, tvLine35, tvLine36, tvLine37, tvLine38, tvLine39, tvLine40;
+        TextView tvLine41, tvLine42, tvLine43, tvLine44, tvLine45, tvLine46, tvLine47, tvLine48, tvLine49, tvLine50;
+        TextView tvLine51, tvLine52, tvLine53, tvLine54, tvLine55, tvLine56, tvLine57, tvLine58, tvLine59, tvLine60;
+        TextView tvLine61, tvLine62, tvLine63, tvLine64, tvLine65, tvLine66, tvLine67, tvLine68, tvLine69, tvLine70;
+
 
         popupView = new Dialog(c);
         popupView.setContentView(R.layout.popup_search);
@@ -951,8 +962,177 @@ public class UpdateMpesaPop {
         EditText searchBox = popupView.findViewById(R.id.searchBox);
         RecyclerView recyclerView = popupView.findViewById(R.id.recyclerView);
 
-        recyclerView.setLayoutManager(new LinearLayoutManager(c));
+        arrow_button = popupView.findViewById(R.id.arrow_button);
+        arrow_button1 = popupView.findViewById(R.id.arrow_button1);
+        arrow_button2 = popupView.findViewById(R.id.arrow_button2);
+        arrow_button3 = popupView.findViewById(R.id.arrow_button3);
+        arrow_button4 = popupView.findViewById(R.id.arrow_button4);
+        arrow_button5 = popupView.findViewById(R.id.arrow_button5);
+        arrow_button6 = popupView.findViewById(R.id.arrow_button6);
+        arrow_button7 = popupView.findViewById(R.id.arrow_button7);
+        arrow_button8 = popupView.findViewById(R.id.arrow_button8);
 
+        hidden_view = popupView.findViewById(R.id.hidden_view);
+        hidden_view1 = popupView.findViewById(R.id.hidden_view1);
+        hidden_view2 = popupView.findViewById(R.id.hidden_view2);
+        hidden_view3 = popupView.findViewById(R.id.hidden_view3);
+        hidden_view4 = popupView.findViewById(R.id.hidden_view4);
+        hidden_view5 = popupView.findViewById(R.id.hidden_view5);
+        hidden_view6 = popupView.findViewById(R.id.hidden_view6);
+        hidden_view7 = popupView.findViewById(R.id.hidden_view7);
+        hidden_view8 = popupView.findViewById(R.id.hidden_view8);
+
+        cardView = popupView.findViewById(R.id.base_cardview);
+        cardView1 = popupView.findViewById(R.id.base_cardview1);
+        cardView2 = popupView.findViewById(R.id.base_cardview2);
+        cardView3 = popupView.findViewById(R.id.base_cardview3);
+        cardView4 = popupView.findViewById(R.id.base_cardview4);
+        cardView5 = popupView.findViewById(R.id.base_cardview5);
+        cardView6 = popupView.findViewById(R.id.base_cardview6);
+        cardView7 = popupView.findViewById(R.id.base_cardview7);
+        cardView8 = popupView.findViewById(R.id.base_cardview8);
+
+
+        tvLine1 = popupView.findViewById(R.id.tvLine1);
+        tvLine2 = popupView.findViewById(R.id.tvLine2);
+        tvLine3 = popupView.findViewById(R.id.tvLine3);
+        tvLine4 = popupView.findViewById(R.id.tvLine4);
+        tvLine5 = popupView.findViewById(R.id.tvLine5);
+        tvLine6 = popupView.findViewById(R.id.tvLine6);
+        tvLine7 = popupView.findViewById(R.id.tvLine7);
+        tvLine8 = popupView.findViewById(R.id.tvLine8);
+        tvLine9 = popupView.findViewById(R.id.tvLine9);
+        tvLine10 = popupView.findViewById(R.id.tvLine10);
+
+        tvLine11 = popupView.findViewById(R.id.tvLine11);
+        tvLine12 = popupView.findViewById(R.id.tvLine12);
+        tvLine13 = popupView.findViewById(R.id.tvLine13);
+        tvLine14 = popupView.findViewById(R.id.tvLine14);
+        tvLine15 = popupView.findViewById(R.id.tvLine15);
+        tvLine16 = popupView.findViewById(R.id.tvLine16);
+        tvLine17 = popupView.findViewById(R.id.tvLine17);
+        tvLine18 = popupView.findViewById(R.id.tvLine18);
+        tvLine19 = popupView.findViewById(R.id.tvLine19);
+        tvLine20 = popupView.findViewById(R.id.tvLine20);
+
+        tvLine21 = popupView.findViewById(R.id.tvLine21);
+        tvLine22 = popupView.findViewById(R.id.tvLine22);
+        tvLine23 = popupView.findViewById(R.id.tvLine23);
+        tvLine24 = popupView.findViewById(R.id.tvLine24);
+        tvLine25 = popupView.findViewById(R.id.tvLine25);
+        tvLine26 = popupView.findViewById(R.id.tvLine26);
+        tvLine27 = popupView.findViewById(R.id.tvLine27);
+        tvLine28 = popupView.findViewById(R.id.tvLine28);
+        tvLine29 = popupView.findViewById(R.id.tvLine29);
+        tvLine30 = popupView.findViewById(R.id.tvLine30);
+
+        tvLine31 = popupView.findViewById(R.id.tvLine31);
+        tvLine32 = popupView.findViewById(R.id.tvLine32);
+        tvLine33 = popupView.findViewById(R.id.tvLine33);
+        tvLine34 = popupView.findViewById(R.id.tvLine34);
+        tvLine35 = popupView.findViewById(R.id.tvLine35);
+        tvLine36 = popupView.findViewById(R.id.tvLine36);
+        tvLine37 = popupView.findViewById(R.id.tvLine37);
+        tvLine38 = popupView.findViewById(R.id.tvLine38);
+        tvLine39 = popupView.findViewById(R.id.tvLine39);
+        tvLine40 = popupView.findViewById(R.id.tvLine40);
+
+        tvLine41 = popupView.findViewById(R.id.tvLine41);
+        tvLine42 = popupView.findViewById(R.id.tvLine42);
+        tvLine43 = popupView.findViewById(R.id.tvLine43);
+        tvLine44 = popupView.findViewById(R.id.tvLine44);
+        tvLine45 = popupView.findViewById(R.id.tvLine45);
+        tvLine46 = popupView.findViewById(R.id.tvLine46);
+        tvLine47 = popupView.findViewById(R.id.tvLine47);
+        tvLine48 = popupView.findViewById(R.id.tvLine48);
+        tvLine49 = popupView.findViewById(R.id.tvLine49);
+        tvLine50 = popupView.findViewById(R.id.tvLine50);
+
+        tvLine51 = popupView.findViewById(R.id.tvLine51);
+        tvLine52 = popupView.findViewById(R.id.tvLine52);
+        tvLine53 = popupView.findViewById(R.id.tvLine53);
+        tvLine54 = popupView.findViewById(R.id.tvLine54);
+        tvLine55 = popupView.findViewById(R.id.tvLine55);
+        tvLine56 = popupView.findViewById(R.id.tvLine56);
+        tvLine57 = popupView.findViewById(R.id.tvLine57);
+        tvLine58 = popupView.findViewById(R.id.tvLine58);
+        tvLine59 = popupView.findViewById(R.id.tvLine59);
+        tvLine60 = popupView.findViewById(R.id.tvLine60);
+
+        setOnclickListenerTextView(tvLine1);
+        setOnclickListenerTextView(tvLine2);
+        setOnclickListenerTextView(tvLine3);
+        setOnclickListenerTextView(tvLine4);
+        setOnclickListenerTextView(tvLine5);
+        setOnclickListenerTextView(tvLine6);
+        setOnclickListenerTextView(tvLine7);
+        setOnclickListenerTextView(tvLine8);
+        setOnclickListenerTextView(tvLine9);
+        setOnclickListenerTextView(tvLine10);
+
+        setOnclickListenerTextView(tvLine11);
+        setOnclickListenerTextView(tvLine12);
+        setOnclickListenerTextView(tvLine13);
+        setOnclickListenerTextView(tvLine14);
+        setOnclickListenerTextView(tvLine15);
+        setOnclickListenerTextView(tvLine16);
+        setOnclickListenerTextView(tvLine17);
+        setOnclickListenerTextView(tvLine18);
+        setOnclickListenerTextView(tvLine19);
+        setOnclickListenerTextView(tvLine20);
+
+        setOnclickListenerTextView(tvLine21);
+        setOnclickListenerTextView(tvLine22);
+        setOnclickListenerTextView(tvLine23);
+        setOnclickListenerTextView(tvLine24);
+        setOnclickListenerTextView(tvLine25);
+        setOnclickListenerTextView(tvLine26);
+        setOnclickListenerTextView(tvLine27);
+        setOnclickListenerTextView(tvLine28);
+        setOnclickListenerTextView(tvLine29);
+        setOnclickListenerTextView(tvLine30);
+
+        setOnclickListenerTextView(tvLine31);
+        setOnclickListenerTextView(tvLine32);
+        setOnclickListenerTextView(tvLine33);
+        setOnclickListenerTextView(tvLine34);
+        setOnclickListenerTextView(tvLine35);
+        setOnclickListenerTextView(tvLine36);
+        setOnclickListenerTextView(tvLine37);
+        setOnclickListenerTextView(tvLine38);
+        setOnclickListenerTextView(tvLine39);
+        setOnclickListenerTextView(tvLine40);
+
+        setOnclickListenerTextView(tvLine41);
+        setOnclickListenerTextView(tvLine42);
+        setOnclickListenerTextView(tvLine43);
+        setOnclickListenerTextView(tvLine44);
+        setOnclickListenerTextView(tvLine45);
+        setOnclickListenerTextView(tvLine46);
+        setOnclickListenerTextView(tvLine47);
+        setOnclickListenerTextView(tvLine48);
+        setOnclickListenerTextView(tvLine49);
+        setOnclickListenerTextView(tvLine50);
+
+        setOnclickListenerTextView(tvLine51);
+        setOnclickListenerTextView(tvLine52);
+        setOnclickListenerTextView(tvLine53);
+        setOnclickListenerTextView(tvLine54);
+        setOnclickListenerTextView(tvLine55);
+        setOnclickListenerTextView(tvLine56);
+        setOnclickListenerTextView(tvLine57);
+        setOnclickListenerTextView(tvLine58);
+        setOnclickListenerTextView(tvLine59);
+        setOnclickListenerTextView(tvLine60);
+
+
+        recyclerView.setLayoutManager(new LinearLayoutManager(c));
+        arrow_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
 
         otherLinesAdapter = new PopupSearchAdapter(itemList, (item, position) -> {
 //            Toast.makeText(c, "Clicked: " + item, Toast.LENGTH_SHORT).show();
@@ -960,6 +1140,16 @@ public class UpdateMpesaPop {
             etExpenseLine.setText(expense_line);
             popupView.dismiss();
         });
+
+        setOnclickListenToView(arrow_button, hidden_view, cardView);
+        setOnclickListenToView(arrow_button1, hidden_view1, cardView1);
+        setOnclickListenToView(arrow_button2, hidden_view2, cardView2);
+        setOnclickListenToView(arrow_button3, hidden_view3, cardView3);
+        setOnclickListenToView(arrow_button4, hidden_view4, cardView4);
+        setOnclickListenToView(arrow_button5, hidden_view5, cardView5);
+        setOnclickListenToView(arrow_button6, hidden_view6, cardView6);
+        setOnclickListenToView(arrow_button7, hidden_view7, cardView7);
+        setOnclickListenToView(arrow_button8, hidden_view8, cardView8);
 
 
         recyclerView.setAdapter(otherLinesAdapter);
@@ -981,6 +1171,30 @@ public class UpdateMpesaPop {
 
         popupView.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         popupView.show();
+    }
+
+    public void setOnclickListenerTextView(TextView tv) {
+        tv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                etExpenseLine.setText(tv.getText());
+                popupView.dismiss();
+            }
+        });
+    }
+
+    public void setOnclickListenToView(ImageButton imageButton, LinearLayout layoutView, CardView cardView) {
+        imageButton.setOnClickListener(view -> {
+            if (layoutView.getVisibility() == View.VISIBLE) {
+                TransitionManager.beginDelayedTransition(cardView, new AutoTransition());
+                layoutView.setVisibility(View.GONE);
+                imageButton.setImageResource(R.drawable.baseline_expand_right);
+            } else {
+                TransitionManager.beginDelayedTransition(cardView, new AutoTransition());
+                layoutView.setVisibility(View.VISIBLE);
+                imageButton.setImageResource(R.drawable.baseline_expand_less_24);
+            }
+        });
     }
 
     private void loadItems() {
@@ -1014,7 +1228,7 @@ public class UpdateMpesaPop {
                         String success = jsonObject.getString("success");
                         JSONArray jsonArray = jsonObject.getJSONArray("data");
 
-                        Log.e("TAG Expense",result);
+                        Log.e("TAG Expense", result);
                         if (success.equals("1")) {
 
                             int l = 0;

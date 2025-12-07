@@ -44,6 +44,7 @@ import com.android.volley.toolbox.Volley;
 //import com.github.mikephil.charting.data.PieEntry;
 //import com.github.mikephil.charting.utils.ColorTemplate;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
+import com.mb.kibeti.coupon.ui.InviteFriendActivity;
 import com.mb.kibeti.eod_dashboard.EODFeelingActivity;
 import com.mb.kibeti.invest_guide.InputScreenActivity;
 import com.mb.kibeti.invest_guide.InvestmentModelActivity;
@@ -376,9 +377,9 @@ public class HomeFragment extends Fragment {
             public void onClick(View view) {
 
 //                Intent intent = new Intent(view.getContext(), BPMainActivity.class);
-                Intent intent = new Intent(view.getContext(), DynamicInputActivity.class);
-                view.getContext().startActivity(intent);
-//                Toast.makeText(getContext(), "Coming Soon...", Toast.LENGTH_SHORT).show();
+//                Intent intent = new Intent(view.getContext(), InviteFriendActivity.class);
+//                view.getContext().startActivity(intent);
+                Toast.makeText(getContext(), "Coming Soon...", Toast.LENGTH_SHORT).show();
             }
         });
         investmentReturnIV.setOnClickListener(new View.OnClickListener() {
