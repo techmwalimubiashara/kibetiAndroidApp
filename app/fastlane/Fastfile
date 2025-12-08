@@ -1,0 +1,17 @@
+default_platform(:android)
+
+platform :android do
+  desc "Deploy a new version to Google Play"
+  lane :deploy do
+    gradle(
+      task: "bundle",
+      build_type: "Release"
+    )
+
+    upload_to_play_store(
+      aab: "app/build/outputs/bundle/release/app-release.aab",
+      json_key: "../service_account.json",
+      track: "internal" # use production when ready
+    )
+  end
+end
